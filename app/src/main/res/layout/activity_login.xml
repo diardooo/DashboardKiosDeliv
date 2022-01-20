@@ -72,6 +72,6 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/button_bg"
         android:text="Login"
-        app:backgroundTint="#0F8AF9" />
+        android:textColor="@color/white"/>
 
 </RelativeLayout>
