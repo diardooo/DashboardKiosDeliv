@@ -12,6 +12,6 @@
 
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimary2">#ffffff</color>
-    <color name="colorPrimaryDark">#2E2E2E</color>
+    <color name="colorPrimaryDark">#202020</color>
     <color name="colorAccent">#22292C</color>
 </resources>

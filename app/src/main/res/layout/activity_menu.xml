@@ -188,26 +188,26 @@
         app:fab_labelsPosition="left">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btn_ganti_password"
+            android:id="@+id/btn_float_ganti_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fab_colorNormal="#FFF"
-            app:fab_title="Change Password"
-            app:fab_icon="@drawable/icon_change_password"
             android:background="@color/white"
+            app:fab_colorNormal="#FFF"
+            app:fab_colorPressed="@color/gray"
+            app:fab_icon="@drawable/icon_change_password"
             app:fab_size="mini"
-            app:fab_colorPressed="@color/gray"/>
+            app:fab_title="Change Password" />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btn_logout"
+            android:id="@+id/btn_float_logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fab_colorNormal="#FFF"
-            app:fab_title="Logout"
-            app:fab_icon="@drawable/icon_logout"
             android:background="@color/white"
+            app:fab_colorNormal="#FFF"
+            app:fab_colorPressed="@color/gray"
+            app:fab_icon="@drawable/icon_logout"
             app:fab_size="mini"
-            app:fab_colorPressed="@color/gray"/>
+            app:fab_title="Logout" />
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
