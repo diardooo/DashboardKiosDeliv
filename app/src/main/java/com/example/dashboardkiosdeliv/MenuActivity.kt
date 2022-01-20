@@ -10,12 +10,14 @@ import android.view.LayoutInflater
 import android.view.Window
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.getbase.floatingactionbutton.FloatingActionButton
 
 class MenuActivity : AppCompatActivity() {
 
     private lateinit var logout : FloatingActionButton
     private lateinit var changePassword : FloatingActionButton
+    private lateinit var btnDashboard : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,16 +25,24 @@ class MenuActivity : AppCompatActivity() {
 
         logout = findViewById(R.id.btn_float_logout)
         changePassword = findViewById(R.id.btn_float_ganti_password)
+        btnDashboard = findViewById(R.id.btn_dashboard)
 
+        //LOGOUT
         logout.setOnClickListener {
             customDialog()
         }
 
+        //CHANGE PASSWORD
         changePassword.setOnClickListener {
-            var intent1 = Intent(this, ChangePasswordActivity::class.java)
-            startActivity(intent1)
+            var intent = Intent(this, ChangePasswordActivity::class.java)
+            startActivity(intent)
         }
 
+        //DASHBOARD
+        btnDashboard.setOnClickListener {
+            var intent = Intent(this, DashboardDirekturActivity::class.java)
+            startActivity(intent)
+        }
     }
         fun customDialog(){
 
@@ -43,12 +53,11 @@ class MenuActivity : AppCompatActivity() {
             val mAlertDialog = mBuilder.show()
             mDialogView.findViewById<Button>(R.id.btn_logout_sudah).setOnClickListener {
                 mAlertDialog.dismiss()
-                var intent2 = Intent(this, LoginActivity::class.java)
-                startActivity(intent2)
+                var intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
             }
             mDialogView.findViewById<Button>(R.id.btn_logout_belum).setOnClickListener {
                 mAlertDialog.dismiss()
             }
-
         }
     }
