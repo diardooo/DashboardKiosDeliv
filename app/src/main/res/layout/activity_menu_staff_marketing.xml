@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".MenuActivity">
+    tools:context=".MenuStaffMarketingActivity"
+    android:background="@color/black">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/title_staff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="15dp"
         android:fontFamily="@font/opensans_extrabold"
-        android:text="MENU DIREKTUR"
+        android:text="MENU STAFF MARKETING"
         android:textColor="@color/white"
         android:textSize="24sp" />
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/title"
+        android:layout_below="@+id/title_staff"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
@@ -35,7 +34,7 @@
         android:rowCount="2">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/btn_dashboard"
+            android:id="@+id/btn_dashboard_staff"
             android:layout_width="155dp"
             android:layout_height="155dp"
             android:layout_margin="10dp"
@@ -68,6 +67,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/btn_progres_loket_staff"
             android:layout_width="155dp"
             android:layout_height="155dp"
             android:layout_margin="10dp"
@@ -100,6 +100,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/btn_deposit_staff"
             android:layout_width="155dp"
             android:layout_height="155dp"
             android:layout_margin="10dp"
@@ -141,6 +142,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/btn_profile_staff"
             android:layout_width="155dp"
             android:layout_height="155dp"
             android:layout_margin="10dp"
@@ -188,7 +190,7 @@
         app:fab_labelsPosition="left">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btn_float_ganti_password"
+            android:id="@+id/btn_float_ganti_password_staff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -199,7 +201,7 @@
             app:fab_title="Change Password" />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btn_float_logout"
+            android:id="@+id/btn_float_logout_staff"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"

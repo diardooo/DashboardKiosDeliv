@@ -19,7 +19,7 @@
             android:name=".ChangePasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".MenuActivity"
+            android:name=".MenuDashboardActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

@@ -1,19 +1,14 @@
 package com.example.dashboardkiosdeliv
 
-import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.Window
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.getbase.floatingactionbutton.FloatingActionButton
 
-class MenuActivity : AppCompatActivity() {
+class MenuDashboardActivity : AppCompatActivity() {
 
     private lateinit var logout : FloatingActionButton
     private lateinit var changePassword : FloatingActionButton
@@ -21,11 +16,11 @@ class MenuActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu)
+        setContentView(R.layout.activity_menu_direktur)
 
-        logout = findViewById(R.id.btn_float_logout)
-        changePassword = findViewById(R.id.btn_float_ganti_password)
-        btnDashboard = findViewById(R.id.btn_dashboard)
+        logout = findViewById(R.id.btn_float_logout_direktur)
+        changePassword = findViewById(R.id.btn_float_ganti_password_direktur)
+        btnDashboard = findViewById(R.id.btn_dashboard_direktur)
 
         //LOGOUT
         logout.setOnClickListener {
@@ -51,11 +46,13 @@ class MenuActivity : AppCompatActivity() {
                 .setView(mDialogView)
             mDialogView.setBackgroundResource(R.drawable.popup_bg)
             val mAlertDialog = mBuilder.show()
+
             mDialogView.findViewById<Button>(R.id.btn_logout_sudah).setOnClickListener {
                 mAlertDialog.dismiss()
                 var intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
             }
+
             mDialogView.findViewById<Button>(R.id.btn_logout_belum).setOnClickListener {
                 mAlertDialog.dismiss()
             }

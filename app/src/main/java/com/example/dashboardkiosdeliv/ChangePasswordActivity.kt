@@ -45,7 +45,7 @@ class ChangePasswordActivity : AppCompatActivity() {
     private fun back(){
         var back = findViewById<ImageView>(R.id.img_back_chng_pass)
         back.setOnClickListener {
-            intent = Intent(this, MenuActivity::class.java)
+            intent = Intent(this, MenuDashboardActivity::class.java)
             startActivity(intent)
         }
     }

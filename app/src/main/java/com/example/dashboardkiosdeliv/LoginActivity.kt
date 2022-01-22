@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
                 password.requestFocus()
                 return@setOnClickListener
             }
-            val intent = Intent(this,MenuActivity::class.java)
+            val intent = Intent(this,MenuDashboardActivity::class.java)
             startActivity(intent)
         }
     }

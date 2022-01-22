@@ -11,7 +11,6 @@ import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.formatter.PercentFormatter
-import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
 
@@ -30,7 +29,7 @@ class DashboardDirekturActivity : AppCompatActivity() {
 
 
         btnBack.setOnClickListener {
-            intent = Intent(this, MenuActivity::class.java)
+            intent = Intent(this, MenuDashboardActivity::class.java)
             startActivity(intent)
         }
 
