@@ -91,7 +91,7 @@
                                 android:layout_gravity="center"
                                 android:layout_weight="1"
                                 android:drawableStart="@drawable/icon_date2"
-                                android:drawablePadding="8dp"
+                                android:drawablePadding="12dp"
                                 android:fontFamily="@font/opensans_medium"
                                 android:text="1 Jan 2022"
                                 android:textColor="@color/white" />
@@ -104,6 +104,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="-"
+                            android:fontFamily="@font/opensans_bold"
                             android:textSize="14sp" />
 
                         <androidx.cardview.widget.CardView
@@ -126,7 +127,7 @@
                                 android:layout_gravity="center"
                                 android:layout_weight="1"
                                 android:drawableStart="@drawable/icon_date2"
-                                android:drawablePadding="8dp"
+                                android:drawablePadding="12dp"
                                 android:fontFamily="@font/opensans_medium"
                                 android:text="2 Jan 2022"
                                 android:textColor="@color/white" />

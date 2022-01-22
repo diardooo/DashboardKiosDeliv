@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Apptheme.NoActionbar">
         <activity
+            android:name=".DashboardStaffMarketingActivity"
+            android:exported="false" />
+        <activity
             android:name=".DashboardDirekturActivity"
             android:exported="false" />
         <activity
