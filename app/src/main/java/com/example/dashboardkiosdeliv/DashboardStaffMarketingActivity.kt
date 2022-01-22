@@ -28,7 +28,7 @@ class DashboardStaffMarketingActivity : AppCompatActivity() {
         pieChart2 = findViewById(R.id.chart_gagal_staff)
 
         btnBack.setOnClickListener {
-            intent = Intent(this, MenuDashboardActivity::class.java)
+            intent = Intent(this, MenuDirekturActivity::class.java)
             startActivity(intent)
         }
     }

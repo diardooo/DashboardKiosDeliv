@@ -29,7 +29,7 @@ class DashboardDirekturActivity : AppCompatActivity() {
 
 
         btnBack.setOnClickListener {
-            intent = Intent(this, MenuDashboardActivity::class.java)
+            intent = Intent(this, MenuDirekturActivity::class.java)
             startActivity(intent)
         }
 

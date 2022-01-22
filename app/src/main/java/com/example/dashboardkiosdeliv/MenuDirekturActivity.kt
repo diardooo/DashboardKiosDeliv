@@ -8,11 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.getbase.floatingactionbutton.FloatingActionButton
 
-class MenuDashboardActivity : AppCompatActivity() {
+class MenuDirekturActivity : AppCompatActivity() {
 
     private lateinit var logout : FloatingActionButton
     private lateinit var changePassword : FloatingActionButton
     private lateinit var btnDashboard : CardView
+    private lateinit var btnProgresLoket : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +22,7 @@ class MenuDashboardActivity : AppCompatActivity() {
         logout = findViewById(R.id.btn_float_logout_direktur)
         changePassword = findViewById(R.id.btn_float_ganti_password_direktur)
         btnDashboard = findViewById(R.id.btn_dashboard_direktur)
+        btnProgresLoket = findViewById(R.id.btn_progres_loket_direktur)
 
         //LOGOUT
         logout.setOnClickListener {
@@ -36,6 +38,12 @@ class MenuDashboardActivity : AppCompatActivity() {
         //DASHBOARD
         btnDashboard.setOnClickListener {
             var intent = Intent(this, DashboardDirekturActivity::class.java)
+            startActivity(intent)
+        }
+
+        //PROGRES LOKET
+        btnProgresLoket.setOnClickListener {
+            var intent = Intent(this, ProgressLoketActivity::class.java)
             startActivity(intent)
         }
     }
