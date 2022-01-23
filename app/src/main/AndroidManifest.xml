@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Apptheme.NoActionbar">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InformasiDepositActivity"
+            android:exported="false" />
+        <activity
             android:name=".ProgressLoketActivity"
             android:exported="false" />
         <activity

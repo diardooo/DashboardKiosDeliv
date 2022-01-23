@@ -14,6 +14,7 @@ class MenuDirekturActivity : AppCompatActivity() {
     private lateinit var changePassword : FloatingActionButton
     private lateinit var btnDashboard : CardView
     private lateinit var btnProgresLoket : CardView
+    private lateinit var btnInfoDeposit : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,7 @@ class MenuDirekturActivity : AppCompatActivity() {
         changePassword = findViewById(R.id.btn_float_ganti_password_direktur)
         btnDashboard = findViewById(R.id.btn_dashboard_direktur)
         btnProgresLoket = findViewById(R.id.btn_progres_loket_direktur)
+        btnInfoDeposit = findViewById(R.id.btn_deposit_direktur)
 
         //LOGOUT
         logout.setOnClickListener {
@@ -46,6 +48,13 @@ class MenuDirekturActivity : AppCompatActivity() {
             var intent = Intent(this, ProgressLoketActivity::class.java)
             startActivity(intent)
         }
+
+        //INFORMASI DEPOSIT
+        btnInfoDeposit.setOnClickListener {
+            var intent = Intent(this,InformasiDepositActivity::class.java)
+            startActivity(intent)
+        }
+
     }
         fun customDialog(){
 

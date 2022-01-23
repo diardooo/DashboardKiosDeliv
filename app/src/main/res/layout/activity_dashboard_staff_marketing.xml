@@ -25,12 +25,27 @@
             android:src="@drawable/icon_back1" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/opensans_semibold"
             android:text="Dashboard Staff Marketing"
             android:textColor="@color/black"
             android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="end">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginEnd="15dp"
+                android:foregroundGravity="right"
+                android:src="@drawable/icon_dashboard" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
