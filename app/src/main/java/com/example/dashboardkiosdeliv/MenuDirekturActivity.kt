@@ -15,6 +15,7 @@ class MenuDirekturActivity : AppCompatActivity() {
     private lateinit var btnDashboard : CardView
     private lateinit var btnProgresLoket : CardView
     private lateinit var btnInfoDeposit : CardView
+    private lateinit var btnProfile : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,7 @@ class MenuDirekturActivity : AppCompatActivity() {
         btnDashboard = findViewById(R.id.btn_dashboard_direktur)
         btnProgresLoket = findViewById(R.id.btn_progres_loket_direktur)
         btnInfoDeposit = findViewById(R.id.btn_deposit_direktur)
+        btnProfile = findViewById(R.id.btn_profile_direktur)
 
         //LOGOUT
         logout.setOnClickListener {
@@ -52,6 +54,12 @@ class MenuDirekturActivity : AppCompatActivity() {
         //INFORMASI DEPOSIT
         btnInfoDeposit.setOnClickListener {
             var intent = Intent(this,InformasiDepositActivity::class.java)
+            startActivity(intent)
+        }
+
+        //PROFILE
+        btnProfile.setOnClickListener {
+            var intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
 
