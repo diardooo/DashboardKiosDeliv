@@ -44,7 +44,6 @@
                 android:layout_marginEnd="15dp"
                 android:foregroundGravity="right"
                 android:src="@drawable/icon_deposit" />
-
         </LinearLayout>
 
     </LinearLayout>
