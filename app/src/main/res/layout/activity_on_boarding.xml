@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:src="@drawable/logo_sementara" />
+        android:src="@drawable/logo_kios_deliv_2" />
 
     <TextView
         android:id="@+id/tv_backoffice_splashscreen"
