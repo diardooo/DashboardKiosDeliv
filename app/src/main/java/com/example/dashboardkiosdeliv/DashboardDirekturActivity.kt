@@ -27,6 +27,7 @@ class DashboardDirekturActivity : AppCompatActivity() {
     private lateinit var btnDatePickerFrom : CardView
     private lateinit var tvDatePickerTo : TextView
     private lateinit var btnDatePickerTo : CardView
+//    private lateinit val asd
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
