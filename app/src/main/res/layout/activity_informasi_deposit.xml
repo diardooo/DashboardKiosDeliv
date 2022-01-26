@@ -85,7 +85,7 @@
                         app:layout_scrollFlags="scroll|enterAlways">
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/btn_date_form"
+                            android:id="@+id/btn_date_form_depo"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_margin="2dp"
@@ -98,7 +98,7 @@
                             app:cardUseCompatPadding="true">
 
                             <TextView
-                                android:id="@+id/tv_date_from"
+                                android:id="@+id/tv_date_from_depo"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -121,7 +121,7 @@
                             android:textSize="14sp" />
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/btn_date_to"
+                            android:id="@+id/btn_date_to_depo"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_margin="2dp"
@@ -134,7 +134,7 @@
                             app:cardUseCompatPadding="true">
 
                             <TextView
-                                android:id="@+id/tv_to"
+                                android:id="@+id/tv_date_to_depo"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
