@@ -345,8 +345,9 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
-                    app:cardBackgroundColor="@color/grayMuda"
-                    app:cardCornerRadius="8dp">
+                    app:cardBackgroundColor="#F2F2F2"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="3dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -358,9 +359,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/opensans_medium"
+                            android:fontFamily="@font/opensans_bold"
                             android:text="VIA ADMIN"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/gray" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -370,7 +371,7 @@
                             android:fontFamily="@font/opensans_bold"
                             android:gravity="center"
                             android:text="24"
-                            android:textColor="@color/white"
+                            android:textColor="@color/gray"
                             android:textSize="40dp" />
 
                     </LinearLayout>
@@ -386,8 +387,9 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
-                    app:cardBackgroundColor="@color/grayMuda"
-                    app:cardCornerRadius="8dp">
+                    app:cardBackgroundColor="#F2F2F2"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="3dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -399,9 +401,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/opensans_medium"
+                            android:fontFamily="@font/opensans_bold"
                             android:text="VIA WEB"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/gray" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -411,7 +413,7 @@
                             android:fontFamily="@font/opensans_bold"
                             android:gravity="center"
                             android:text="48"
-                            android:textColor="@color/white"
+                            android:textColor="@color/gray"
                             android:textSize="40dp" />
 
                     </LinearLayout>
@@ -427,8 +429,9 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
                     android:foreground="?attr/selectableItemBackgroundBorderless"
-                    app:cardBackgroundColor="@color/grayMuda"
-                    app:cardCornerRadius="8dp">
+                    app:cardBackgroundColor="#F2F2F2"
+                    app:cardCornerRadius="8dp"
+                    android:elevation="3dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -440,9 +443,9 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/opensans_medium"
+                            android:fontFamily="@font/opensans_bold"
                             android:text="VIA MOBILE"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/gray" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -452,7 +455,7 @@
                             android:fontFamily="@font/opensans_bold"
                             android:gravity="center"
                             android:text="109"
-                            android:textColor="@color/white"
+                            android:textColor="@color/gray"
                             android:textSize="40dp" />
 
                     </LinearLayout>

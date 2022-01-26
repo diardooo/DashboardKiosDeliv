@@ -307,8 +307,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
-                        app:cardCornerRadius="8dp">
+                        app:cardBackgroundColor="#F2F2F2"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="3dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -322,7 +323,7 @@
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/opensans_medium"
                                 android:text="Total Pendapatan Kotor (Rupiah)"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/gray" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -332,7 +333,7 @@
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:text="Rp 128.408.550,00"
-                                android:textColor="@color/white"
+                                android:textColor="@color/gray"
                                 android:textSize="26dp" />
 
                         </LinearLayout>
@@ -349,8 +350,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
-                        app:cardCornerRadius="8dp">
+                        app:cardBackgroundColor="#F2F2F2"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="3dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -364,7 +366,7 @@
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/opensans_medium"
                                 android:text="Total Komisi (Rupiah)"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/gray" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -374,7 +376,7 @@
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:text="Rp 62.601.300,00"
-                                android:textColor="@color/white"
+                                android:textColor="@color/gray"
                                 android:textSize="26dp" />
 
                         </LinearLayout>
@@ -391,8 +393,9 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
-                        app:cardCornerRadius="8dp">
+                        app:cardBackgroundColor="#F2F2F2"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="3dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -406,7 +409,7 @@
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/opensans_medium"
                                 android:text="Pendapatan Kios Deliv (Rupiah)"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/gray" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -416,7 +419,7 @@
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:text="Rp 65.807.250.00"
-                                android:textColor="@color/white"
+                                android:textColor="@color/gray"
                                 android:textSize="26dp" />
 
                         </LinearLayout>
@@ -453,7 +456,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/grayMuda"
+                        app:cardBackgroundColor="@color/gray"
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
@@ -495,7 +498,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/grayMuda"
+                        app:cardBackgroundColor="@color/gray"
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
@@ -537,7 +540,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/grayMuda"
+                        app:cardBackgroundColor="@color/gray"
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
@@ -579,7 +582,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/grayMuda"
+                        app:cardBackgroundColor="@color/gray"
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
@@ -621,7 +624,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/grayMuda"
+                        app:cardBackgroundColor="@color/gray"
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
