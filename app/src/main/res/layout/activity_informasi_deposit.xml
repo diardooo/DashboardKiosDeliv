@@ -106,7 +106,7 @@
                                 android:drawableStart="@drawable/icon_date2"
                                 android:drawablePadding="12dp"
                                 android:fontFamily="@font/opensans_medium"
-                                android:text="1 Jan 2022"
+                                android:text="01-01-2022"
                                 android:textColor="@color/white" />
 
                         </androidx.cardview.widget.CardView>
@@ -142,7 +142,7 @@
                                 android:drawableStart="@drawable/icon_date2"
                                 android:drawablePadding="12dp"
                                 android:fontFamily="@font/opensans_medium"
-                                android:text="2 Jan 2022"
+                                android:text="01-01-2022"
                                 android:textColor="@color/white" />
 
                         </androidx.cardview.widget.CardView>

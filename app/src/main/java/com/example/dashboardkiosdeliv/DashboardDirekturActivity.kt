@@ -43,6 +43,7 @@ class DashboardDirekturActivity : AppCompatActivity() {
         tvDatePickerTo = findViewById(R.id.tv_date_to_dsb_direktur)
         btnDatePickerTo = findViewById(R.id.btn_date_to_dsb_direktur)
 
+        //DATE PICKER
         val datePickerFrom = Calendar.getInstance()
         val datePickerTo = Calendar.getInstance()
 
