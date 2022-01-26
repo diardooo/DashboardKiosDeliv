@@ -42,7 +42,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_marginEnd="15dp"
-                android:foregroundGravity="right"
                 android:src="@drawable/icon_deposit" />
         </LinearLayout>
 
@@ -160,7 +159,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
+                        app:cardBackgroundColor="#F2F2F2"
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
@@ -168,14 +167,36 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/opensans_medium"
-                                android:text="DEPOSIT TUNAI"
-                                android:textColor="@color/white" />
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:text="DEPOSIT TUNAI"
+                                    android:textColor="@color/gray"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/icon_cash"
+                                        android:layout_marginTop="15dp"
+                                        android:layout_marginEnd="15dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -185,7 +206,7 @@
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:text="2.096"
-                                android:textColor="@color/white"
+                                android:textColor="@color/gray"
                                 android:textSize="40dp" />
 
                         </LinearLayout>
@@ -201,22 +222,44 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
-                        app:cardCornerRadius="8dp">
+                        app:cardBackgroundColor="#F2F2F2"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="3dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/opensans_medium"
-                                android:text="DEPOSIT BRI"
-                                android:textColor="@color/white" />
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:text="DEPOSIT BRI"
+                                    android:textColor="@color/gray" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="45dp"
+                                        android:src="@drawable/bank_bri"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -226,7 +269,7 @@
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:text="409"
-                                android:textColor="@color/white"
+                                android:textColor="@color/gray"
                                 android:textSize="40dp" />
 
                         </LinearLayout>
@@ -242,7 +285,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
+                        app:cardBackgroundColor="#F2F2F2"
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
@@ -250,14 +293,35 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/opensans_medium"
-                                android:text="DEPOSIT BNI"
-                                android:textColor="@color/white" />
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:text="DEPOSIT BNI"
+                                    android:textColor="@color/gray" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="35dp"
+                                        android:src="@drawable/bank_bni"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -267,7 +331,7 @@
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:text="179"
-                                android:textColor="@color/white"
+                                android:textColor="@color/gray"
                                 android:textSize="40dp" />
 
                         </LinearLayout>
@@ -283,7 +347,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
+                        app:cardBackgroundColor="#F2F2F2"
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
@@ -291,14 +355,35 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/opensans_medium"
-                                android:text="DEPOSIT MANDIRI"
-                                android:textColor="@color/white" />
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:text="DEPOSIT MANDIRI"
+                                    android:textColor="@color/gray" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="35dp"
+                                        android:src="@drawable/bank_mandiri"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -308,7 +393,7 @@
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:text="179"
-                                android:textColor="@color/white"
+                                android:textColor="@color/gray"
                                 android:textSize="40dp" />
 
                         </LinearLayout>
@@ -324,7 +409,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
+                        app:cardBackgroundColor="#F2F2F2"
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
@@ -332,14 +417,35 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/opensans_medium"
-                                android:text="DEPOSIT BCA"
-                                android:textColor="@color/white" />
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:text="DEPOSIT BCA"
+                                    android:textColor="@color/gray" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/bank_bca"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="8dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -349,7 +455,7 @@
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:text="179"
-                                android:textColor="@color/white"
+                                android:textColor="@color/gray"
                                 android:textSize="40dp" />
 
                         </LinearLayout>
@@ -365,7 +471,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
                         android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
+                        app:cardBackgroundColor="#F2F2F2"
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
@@ -373,14 +479,35 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/opensans_medium"
-                                android:text="DEPOSIT VIRTUAL BNI"
-                                android:textColor="@color/white" />
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:text="DEPOSIT VIRTUAL BNI"
+                                    android:textColor="@color/gray" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="35dp"
+                                        android:src="@drawable/bank_bni"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -390,7 +517,7 @@
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:text="179"
-                                android:textColor="@color/white"
+                                android:textColor="@color/gray"
                                 android:textSize="40dp" />
 
                         </LinearLayout>
