@@ -11,6 +11,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.formatter.PercentFormatter
@@ -60,6 +61,8 @@ class DashboardStaffMarketingActivity : AppCompatActivity() {
             dateTo(datePickerTo)
         }
 
+        setPiechart1()
+        setPieChart2()
 
         //EVENT
         btnBack.setOnClickListener {
@@ -81,6 +84,86 @@ class DashboardStaffMarketingActivity : AppCompatActivity() {
                 datePickerTo.get(Calendar.DAY_OF_MONTH)).show()
         }
 
+    }
+
+    private fun setPiechart1(){
+
+        val xvalues = ArrayList<String >()
+        xvalues.add("PLN Pascabayar")
+        xvalues.add("PLN Prabayar")
+        xvalues.add("Lainnya")
+
+        val piechartentry = ArrayList<Entry>()
+
+        piechartentry.add( Entry(87.12F, 0 ))
+        piechartentry.add( Entry(6.76f, 1 ))
+        piechartentry.add( Entry(5.45f, 2 ))
+
+        val piedataset = PieDataSet(piechartentry,"")
+
+        val colors = arrayListOf<Int>()
+        colors.add(ColorTemplate.rgb("#61d4b3"))
+        colors.add(ColorTemplate.rgb("#fdd365"))
+        colors.add(ColorTemplate.rgb("#f0134d"))
+        colors.add(ColorTemplate.rgb("#fb8d62"))
+        colors.add(ColorTemplate.rgb("#fd2eb3"))
+        colors.add(ColorTemplate.rgb("#ff677d"))
+        colors.add(ColorTemplate.rgb("#ff9d9d"))
+        colors.add(ColorTemplate.rgb("#633a82"))
+        colors.random()
+
+        piedataset.sliceSpace = 3f
+        piedataset.colors = colors
+        piedataset.valueTextSize = 10f
+
+        val data = PieData( xvalues,piedataset)
+
+        pieChart1.data = data
+        pieChart1.holeRadius = 40f
+        pieChart1.setBackgroundColor(resources.getColor(R.color.white))
+        pieChart1.transparentCircleRadius = 61f
+        pieChart1.setDescription("")
+        pieChart1.setExtraOffsets(5f, 10f, 5f, 5f)
+        pieChart1.animateY(1400, Easing.EasingOption.EaseInOutCirc)
+
+    }
+
+    private fun setPieChart2(){
+
+        val xvalues2 = ArrayList<String >()
+        xvalues2.add("PLN Pascabayar")
+        xvalues2.add("PLN Prabayar")
+
+        val piechartentry2 = ArrayList<Entry>()
+        piechartentry2.add( Entry(71.4F, 0 ))
+        piechartentry2.add( Entry(28.6f, 1 ))
+
+        val piedataset2 = PieDataSet(piechartentry2,"")
+
+        val colors2 = arrayListOf<Int>()
+        colors2.add(ColorTemplate.rgb("#61d4b3"))
+        colors2.add(ColorTemplate.rgb("#fdd365"))
+        colors2.add(ColorTemplate.rgb("#f0134d"))
+        colors2.add(ColorTemplate.rgb("#fb8d62"))
+        colors2.add(ColorTemplate.rgb("#fd2eb3"))
+        colors2.add(ColorTemplate.rgb("#ff677d"))
+        colors2.add(ColorTemplate.rgb("#ff9d9d"))
+        colors2.add(ColorTemplate.rgb("#633a82"))
+        colors2.random()
+
+        piedataset2.sliceSpace = 3f
+        piedataset2.colors = colors2
+        piedataset2.valueTextSize = 12f
+
+        val data2 = PieData( xvalues2,piedataset2)
+
+        pieChart2.data = data2
+        pieChart2.holeRadius = 40f
+        pieChart2.setBackgroundColor(resources.getColor(R.color.white))
+        pieChart2.transparentCircleRadius = 60f
+        pieChart2.setDescription("")
+        pieChart2.setExtraOffsets(5f, 10f, 5f, 5f)
+        pieChart2.animateY(1400, Easing.EasingOption.EaseInOutCirc)
     }
 
     private fun dateFrom(myCalendar: Calendar){
