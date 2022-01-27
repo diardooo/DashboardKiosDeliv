@@ -206,9 +206,9 @@
                                 android:layout_marginBottom="20dp"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="2.096"
+                                android:text="Rp 456.442.648,00"
                                 android:textColor="@color/gray"
-                                android:textSize="40dp" />
+                                android:textSize="30dp" />
 
                         </LinearLayout>
 
@@ -269,9 +269,9 @@
                                 android:layout_marginBottom="20dp"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="409"
+                                android:text="Rp 2.877.445.900,00"
                                 android:textColor="@color/gray"
-                                android:textSize="40dp" />
+                                android:textSize="30dp" />
 
                         </LinearLayout>
 
@@ -332,9 +332,9 @@
                                 android:layout_marginBottom="20dp"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="179"
+                                android:text="Rp 746.286.569,00"
                                 android:textColor="@color/gray"
-                                android:textSize="40dp" />
+                                android:textSize="30dp" />
 
                         </LinearLayout>
 
@@ -395,9 +395,9 @@
                                 android:layout_marginBottom="20dp"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="179"
+                                android:text="Rp 283.081.436,00"
                                 android:textColor="@color/gray"
-                                android:textSize="40dp" />
+                                android:textSize="30dp" />
 
                         </LinearLayout>
 
@@ -458,9 +458,9 @@
                                 android:layout_marginBottom="20dp"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="179"
+                                android:text="Rp 227.702.788,00"
                                 android:textColor="@color/gray"
-                                android:textSize="40dp" />
+                                android:textSize="30dp" />
 
                         </LinearLayout>
 
@@ -521,9 +521,9 @@
                                 android:layout_marginBottom="20dp"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="179"
+                                android:text="Rp 394.214.900,00"
                                 android:textColor="@color/gray"
-                                android:textSize="40dp" />
+                                android:textSize="30dp" />
 
                         </LinearLayout>
 
