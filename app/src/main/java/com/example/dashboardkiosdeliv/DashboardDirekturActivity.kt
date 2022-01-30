@@ -2,14 +2,11 @@ package com.example.dashboardkiosdeliv
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.Typeface
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.PieData
@@ -91,19 +88,22 @@ class DashboardDirekturActivity : AppCompatActivity() {
 
     private fun setPiechart1(){
 
-        val xvalues = ArrayList<String >()
-        xvalues.add("PLN Pascabayar")
-        xvalues.add("PLN Prabayar")
-        xvalues.add("Lainnya")
+        // SETUP PIE CHAR ENTRIES
+        val xValues = ArrayList<String >()
+        xValues.add("PLN Pascabayar")
+        xValues.add("PLN Prabayar")
+        xValues.add("Lainnya")
 
-        val piechartentry = ArrayList<Entry>()
+        val pieChartEntry = ArrayList<Entry>()
+        pieChartEntry.add( Entry(87.12F, 0 ))
+        pieChartEntry.add( Entry(6.76f, 1 ))
+        pieChartEntry.add( Entry(5.45f, 2 ))
 
-        piechartentry.add( Entry(87.12F, 0 ))
-        piechartentry.add( Entry(6.76f, 1 ))
-        piechartentry.add( Entry(5.45f, 2 ))
+        // SETUP PIE CHART ANIMATION
+        pieChart1.animateXY(1000, 1000)
 
-        val piedataset = PieDataSet(piechartentry,"")
-
+        // SETUP PIECHART ENTRIES COLORS, CHART SLICE SPACE, AND TEXT
+        val pieDataSet = PieDataSet(pieChartEntry,"")
         val colors = arrayListOf<Int>()
         colors.add(ColorTemplate.rgb("#61d4b3"))
         colors.add(ColorTemplate.rgb("#fdd365"))
@@ -115,58 +115,85 @@ class DashboardDirekturActivity : AppCompatActivity() {
         colors.add(ColorTemplate.rgb("#633a82"))
         colors.random()
 
-        piedataset.sliceSpace = 3f
-        piedataset.colors = colors
-        piedataset.valueTextSize = 10f
+        pieDataSet.colors = colors
+        pieDataSet.sliceSpace = 3f
+        pieDataSet.valueTextSize = 10f
+        pieDataSet.valueTextColor = R.color.black
 
-        val data = PieData( xvalues,piedataset)
+        // SETUP TEXT IN PIE CHART CENTER
+        pieChart1.centerText = "Transaksi Berhasil"
+        pieChart1.setCenterTextColor(resources.getColor(android.R.color.holo_green_dark))
+        pieChart1.setCenterTextSize(10F)
 
-        pieChart1.data = data
+        // SETUP PIE DATA SET IN PieData
+        val pieData = PieData( xValues,pieDataSet)
+
+        // ENABLED THE VALUE ON EACH PieChartEntry
+        pieData.setDrawValues(true)
+        pieChart1.data = pieData
+
+        // OPTIONAL PIE CHART SETUP
         pieChart1.holeRadius = 40f
         pieChart1.setBackgroundColor(resources.getColor(R.color.white))
-        pieChart1.transparentCircleRadius = 61f
+        pieChart1.transparentCircleRadius = 60f
         pieChart1.setDescription("")
         pieChart1.setExtraOffsets(5f, 10f, 5f, 5f)
-        pieChart1.animateY(1400, Easing.EasingOption.EaseInOutCirc)
 
     }
 
     private fun setPieChart2(){
 
-        val xvalues2 = ArrayList<String >()
-        xvalues2.add("PLN Pascabayar")
-        xvalues2.add("PLN Prabayar")
+        // SETUP PIE CHAR ENTRIES
+        val xValues = ArrayList<String >()
+        xValues.add("PLN Pascabayar")
+        xValues.add("PLN Prabayar")
 
-        val piechartentry2 = ArrayList<Entry>()
-        piechartentry2.add( Entry(71.4F, 0 ))
-        piechartentry2.add( Entry(28.6f, 1 ))
+        val pieChartEntry = ArrayList<Entry>()
+        pieChartEntry.add( Entry(71f, 0))
+        pieChartEntry.add( Entry(28f, 1 ))
 
-        val piedataset2 = PieDataSet(piechartentry2,"")
+        // SETUP PIE CHART ANIMATION
+        pieChart2.animateXY(1000, 1000)
 
-        val colors2 = arrayListOf<Int>()
-        colors2.add(ColorTemplate.rgb("#61d4b3"))
-        colors2.add(ColorTemplate.rgb("#fdd365"))
-        colors2.add(ColorTemplate.rgb("#f0134d"))
-        colors2.add(ColorTemplate.rgb("#fb8d62"))
-        colors2.add(ColorTemplate.rgb("#fd2eb3"))
-        colors2.add(ColorTemplate.rgb("#ff677d"))
-        colors2.add(ColorTemplate.rgb("#ff9d9d"))
-        colors2.add(ColorTemplate.rgb("#633a82"))
-        colors2.random()
+        // SETUP PIECHART ENTRIES COLORS, CHART SLICE SPACE, AND TEXT
+        val pieDataSet = PieDataSet(pieChartEntry,"")
+        val colors = arrayListOf<Int>()
+        colors.add(ColorTemplate.rgb("#f0134d"))
+        colors.add(ColorTemplate.rgb("#fb8d62"))
+        colors.add(ColorTemplate.rgb("#fd2eb3"))
+        colors.add(ColorTemplate.rgb("#ff677d"))
+        colors.add(ColorTemplate.rgb("#ff9d9d"))
+        colors.add(ColorTemplate.rgb("#633a82"))
+        colors.add(ColorTemplate.rgb("#61d4b3"))
+        colors.add(ColorTemplate.rgb("#fdd365"))
+        colors.random()
 
-        piedataset2.sliceSpace = 3f
-        piedataset2.colors = colors2
-        piedataset2.valueTextSize = 12f
+        pieDataSet.colors = colors
+        pieDataSet.sliceSpace = 3f
+        pieDataSet.valueTextSize = 12f
+        pieDataSet.valueTextColor = R.color.black
 
-        val data2 = PieData( xvalues2,piedataset2)
+        // SETUP TEXT IN PIE CHART CENTER
+        pieChart2.centerText = "Transaksi Gagal"
+        pieChart2.setCenterTextColor(resources.getColor(android.R.color.holo_red_dark))
+        pieChart2.setCenterTextSize(10F)
 
-        pieChart2.data = data2
+        // SETUP PIE DATA SET IN PieData
+        val pieData = PieData(xValues,pieDataSet)
+
+//        pieData.setValueFormatter(PercentFormatter())
+//        pieChart2.setUsePercentValues(true)
+
+        // ENABLED THE VALUE ON EACH PieChartEntry
+        pieData.setDrawValues(true)
+        pieChart2.data = pieData
+
+        // OPTIONAL PIE CHART SETUP
         pieChart2.holeRadius = 40f
         pieChart2.setBackgroundColor(resources.getColor(R.color.white))
         pieChart2.transparentCircleRadius = 60f
         pieChart2.setDescription("")
         pieChart2.setExtraOffsets(5f, 10f, 5f, 5f)
-        pieChart2.animateY(1400, Easing.EasingOption.EaseInOutCirc)
     }
 
     private fun dateFrom(myCalendar: Calendar){
