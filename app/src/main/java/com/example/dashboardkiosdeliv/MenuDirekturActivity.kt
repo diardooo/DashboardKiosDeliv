@@ -37,6 +37,7 @@ class MenuDirekturActivity : AppCompatActivity() {
         changePassword.setOnClickListener {
             var intent = Intent(this, ChangePasswordActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         //DASHBOARD
@@ -64,7 +65,27 @@ class MenuDirekturActivity : AppCompatActivity() {
         }
 
     }
-        fun customDialog(){
+
+    override fun onBackPressed() {
+        val mDialogView = LayoutInflater.from(this).inflate(R.layout.popup_logout_layout,null)
+        val mBuilder = androidx.appcompat.app.AlertDialog.Builder(this)
+            .setView(mDialogView)
+        mDialogView.setBackgroundResource(R.drawable.popup_bg)
+        val mAlertDialog = mBuilder.show()
+
+        mDialogView.findViewById<Button>(R.id.btn_logout_sudah).setOnClickListener {
+            mAlertDialog.dismiss()
+            var intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        mDialogView.findViewById<Button>(R.id.btn_logout_belum).setOnClickListener {
+            mAlertDialog.dismiss()
+        }
+    }
+
+        private fun customDialog(){
 
             val mDialogView = LayoutInflater.from(this).inflate(R.layout.popup_logout_layout,null)
             val mBuilder = androidx.appcompat.app.AlertDialog.Builder(this)
@@ -76,6 +97,7 @@ class MenuDirekturActivity : AppCompatActivity() {
                 mAlertDialog.dismiss()
                 var intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
+                finish()
             }
 
             mDialogView.findViewById<Button>(R.id.btn_logout_belum).setOnClickListener {

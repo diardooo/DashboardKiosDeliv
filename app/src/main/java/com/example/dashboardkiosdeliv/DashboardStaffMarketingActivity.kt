@@ -195,7 +195,7 @@ class DashboardStaffMarketingActivity : AppCompatActivity() {
         pieChart2.transparentCircleRadius = 60f
         pieChart2.setDescription("")
         pieChart2.setExtraOffsets(5f, 10f, 5f, 5f)
-        
+
     }
 
     private fun dateFrom(myCalendar: Calendar) {

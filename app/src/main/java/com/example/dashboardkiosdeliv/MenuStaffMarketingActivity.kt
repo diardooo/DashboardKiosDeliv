@@ -52,6 +52,7 @@ class MenuStaffMarketingActivity : AppCompatActivity() {
             mAlertDialog.dismiss()
             var intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         mDialogView.findViewById<Button>(R.id.btn_logout_belum).setOnClickListener {
