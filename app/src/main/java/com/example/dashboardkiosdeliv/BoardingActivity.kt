@@ -44,9 +44,9 @@ class BoardingActivity : AppCompatActivity() {
         // Add some data to model class
 
         val onBoardingData:MutableList<OnBoardingData> = ArrayList()
-        onBoardingData.add(OnBoardingData("DASHBOARD","Berisi informasi transaksi Kios Deliv",R.drawable.onboarding_transaksi))
-        onBoardingData.add(OnBoardingData("LOKET","Terdapat informasi progres loket Kios Deliv",R.drawable.onboarding_loket))
-        onBoardingData.add(OnBoardingData("DEPOSIT","Berisi informasi deposit user Kios Deliv", R.drawable.onboarding_deposit))
+        onBoardingData.add(OnBoardingData("DASHBOARD","Berisi informasi jumlah transaksi, saldo vendor, dan pendapatan Kios Deliv",R.drawable.onboarding_transaksi))
+        onBoardingData.add(OnBoardingData("LOKET","Terdapat informasi progres loket Kios Deliv dan informasi transaksi loket baru",R.drawable.onboarding_loket))
+        onBoardingData.add(OnBoardingData("DEPOSIT","Berisi informasi jumlah deposit user Kios Deliv pada tiap bank", R.drawable.onboarding_deposit))
 
         setOnboardingViewPagerAdapter(onBoardingData)
 
