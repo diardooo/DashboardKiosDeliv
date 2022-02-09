@@ -16,7 +16,7 @@ import java.util.ArrayList
 
 class BoardingActivity : AppCompatActivity() {
 
-    var onBoardingViewPagerAdapter:OnBoardingViewPagerAdapter? = null
+    var onBoardingViewPagerAdapter: OnBoardingViewPagerAdapter? = null
     var tabLayout: TabLayout? = null
     var onBoardingViewPager : ViewPager? = null
     var next : TextView? = null
@@ -26,15 +26,13 @@ class BoardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Melihat apakah user pernah membuka app sebelumnya atau tidak (Menggunakan sharedPref)
         if (restorePrefData()){
             val i = Intent(application, LoginActivity::class.java)
             startActivity(i)
             finish()
-        }
 
-//        requestWindowFeature(Window.FEATURE_NO_TITLE)
-//        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-//        supportActionBar!!.hide()
+        }
 
         setContentView(R.layout.activity_boarding)
 
@@ -42,14 +40,13 @@ class BoardingActivity : AppCompatActivity() {
         next = findViewById(R.id.btn_next)
 
         // Add some data to model class
-
         val onBoardingData:MutableList<OnBoardingData> = ArrayList()
         onBoardingData.add(OnBoardingData("DASHBOARD","Berisi informasi jumlah transaksi, saldo vendor, dan pendapatan Kios Deliv",R.drawable.onboarding_transaksi))
         onBoardingData.add(OnBoardingData("LOKET","Terdapat informasi progres loket Kios Deliv dan informasi transaksi loket baru",R.drawable.onboarding_loket))
         onBoardingData.add(OnBoardingData("DEPOSIT","Berisi informasi jumlah deposit user Kios Deliv pada tiap bank", R.drawable.onboarding_deposit))
-
         setOnboardingViewPagerAdapter(onBoardingData)
 
+        // Indikator posisi view pager
         position = onBoardingViewPager!!.currentItem
 
         next?.setOnClickListener {
@@ -64,6 +61,7 @@ class BoardingActivity : AppCompatActivity() {
             }
         }
 
+        // Text view dari "next" ke "get started"
         tabLayout!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabReselected(tab: TabLayout.Tab?) {
             }

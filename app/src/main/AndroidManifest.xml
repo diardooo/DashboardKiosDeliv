@@ -9,6 +9,7 @@
         android:roundIcon="@drawable/logo_kios_deliv_3"
         android:supportsRtl="true"
         android:theme="@style/Apptheme.NoActionbar">
+
         <activity
             android:name=".BoardingActivity"
             android:exported="false" />
@@ -37,7 +38,7 @@
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".OnBoardingActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
