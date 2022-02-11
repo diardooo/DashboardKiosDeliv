@@ -36,6 +36,11 @@ class ChangePasswordActivity : AppCompatActivity() {
                 konfirmasiPass.requestFocus()
                 return@setOnClickListener
             }
+            if (passBaru.text.toString() != konfirmasiPass.text.toString()){
+                konfirmasiPass.error = "Password baru tidak cocok"
+                konfirmasiPass.requestFocus()
+                return@setOnClickListener
+            }
             intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
