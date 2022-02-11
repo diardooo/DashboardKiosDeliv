@@ -150,44 +150,52 @@
 
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0.7dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="#8F8F8F" />
+                </LinearLayout>
 
-                    <androidx.cardview.widget.CardView
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardElevation="1dp"
+                app:contentPadding="12.00dp">
+
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:contentPadding="12dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginEnd="4dp"
-                        app:cardElevation="1dp"
-                        app:cardCornerRadius="8dp">
+                        android:orientation="vertical">
 
-                        <LinearLayout
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:text="Pertumbuhan Loket"
+                            android:fontFamily="@font/opensans_bold"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="10dp"/>
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Pertumbuhan Loket"
-                                android:fontFamily="@font/opensans_bold"
-                                android:textColor="@color/black"
-                                android:layout_marginBottom="10dp"/>
+                        <com.github.mikephil.charting.charts.BarChart
+                            android:id="@+id/chart_progres_loket"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_gravity="center"/>
 
-                            <com.github.mikephil.charting.charts.BarChart
-                                android:id="@+id/chart_progres_loket"
-                                android:layout_width="match_parent"
-                                android:layout_height="200dp"
-                                android:layout_gravity="center"/>
+                    </LinearLayout>
 
-                        </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardElevation="1dp"
+                app:contentPadding="12.00dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
@@ -600,6 +608,7 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
 
 
 
