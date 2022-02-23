@@ -1,6 +1,7 @@
 package com.example.dashboardkiosdeliv
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
@@ -16,10 +17,14 @@ class MenuDirekturActivity : AppCompatActivity() {
     private lateinit var btnProgresLoket : CardView
     private lateinit var btnInfoDeposit : CardView
     private lateinit var btnProfile : CardView
+    private lateinit var profile : SharedPreferences
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_direktur)
+
+        profile = getSharedPreferences("login_session", MODE_PRIVATE)
 
         logout = findViewById(R.id.btn_float_logout_direktur)
         changePassword = findViewById(R.id.btn_float_ganti_password_direktur)
@@ -94,6 +99,8 @@ class MenuDirekturActivity : AppCompatActivity() {
             val mAlertDialog = mBuilder.show()
 
             mDialogView.findViewById<Button>(R.id.btn_logout_sudah).setOnClickListener {
+                //Menghapus session
+                profile.edit().clear().commit()
                 mAlertDialog.dismiss()
                 var intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
