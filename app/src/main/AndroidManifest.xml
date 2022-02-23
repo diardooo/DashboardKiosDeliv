@@ -2,12 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dashboardkiosdeliv">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo_kios_deliv_3"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo_kios_deliv_3"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Apptheme.NoActionbar">
 
         <activity
@@ -33,6 +37,9 @@
             android:exported="false" />
         <activity
             android:name=".MenuDirekturActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuStaffMarketingActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
