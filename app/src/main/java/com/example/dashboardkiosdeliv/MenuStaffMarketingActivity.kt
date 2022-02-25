@@ -39,7 +39,6 @@ class MenuStaffMarketingActivity : AppCompatActivity() {
         changePassword.setOnClickListener {
             var intent = Intent(this, ChangePasswordActivity::class.java)
             startActivity(intent)
-            finish()
         }
 
         //DASHBOARD

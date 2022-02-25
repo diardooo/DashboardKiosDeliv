@@ -57,8 +57,8 @@ class ProgressLoketActivity : AppCompatActivity() {
 
         //EVENT
         btnBack.setOnClickListener {
-            intent = Intent(this, MenuDirekturActivity::class.java)
-            startActivity(intent)
+            onBackPressed()
+            finish()
         }
 
         btnDatePickerFrom.setOnClickListener {

@@ -22,9 +22,11 @@ class ProfileActivity : AppCompatActivity() {
         var btnBack = findViewById<ImageView>(R.id.img_back_profile)
         profile = getSharedPreferences("login_session", MODE_PRIVATE)
 
+
+        //Event
         btnBack.setOnClickListener {
-            intent = Intent(this, MenuDirekturActivity::class.java)
-            startActivity(intent)
+            onBackPressed()
+            finish()
         }
 
         //Menampilkan data profile

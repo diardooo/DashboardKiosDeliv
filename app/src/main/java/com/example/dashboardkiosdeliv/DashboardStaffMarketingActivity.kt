@@ -63,8 +63,9 @@ class DashboardStaffMarketingActivity : AppCompatActivity() {
 
         //EVENT
         btnBack.setOnClickListener {
-            intent = Intent(this, MenuDirekturActivity::class.java)
+            intent = Intent(this, MenuStaffMarketingActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         btnDatePickerFrom.setOnClickListener {

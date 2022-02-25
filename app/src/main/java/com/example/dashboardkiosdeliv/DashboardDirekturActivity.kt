@@ -65,6 +65,7 @@ class DashboardDirekturActivity : AppCompatActivity() {
         btnBack.setOnClickListener {
             intent = Intent(this, MenuDirekturActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         btnDatePickerFrom.setOnClickListener {
