@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dashboardkiosdeliv">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,9 +10,11 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo_kios_deliv_3"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Apptheme.NoActionbar">
-
+        android:theme="@style/Apptheme.NoActionbar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ListLoketTerdampakActivity"
+            android:exported="false" />
         <activity
             android:name=".BoardingActivity"
             android:exported="false" />
