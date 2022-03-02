@@ -24,6 +24,7 @@ class DashboardStaffMarketingActivity : AppCompatActivity() {
     private lateinit var btnDatePickerFrom: CardView
     private lateinit var tvDatePickerTo: TextView
     private lateinit var btnDatePickerTo: CardView
+    private lateinit var btnListLoketTerdampak: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +39,7 @@ class DashboardStaffMarketingActivity : AppCompatActivity() {
         btnDatePickerFrom = findViewById(R.id.btn_date_form_staff)
         tvDatePickerTo = findViewById(R.id.tv_date_to_staff)
         btnDatePickerTo = findViewById(R.id.btn_date_to_staff)
+        btnListLoketTerdampak = findViewById(R.id.btn_list_loket_terdampak)
 
         val datePickerFrom = Calendar.getInstance()
         val datePickerTo = Calendar.getInstance()
@@ -84,6 +86,11 @@ class DashboardStaffMarketingActivity : AppCompatActivity() {
                 datePickerTo.get(Calendar.MONTH),
                 datePickerTo.get(Calendar.DAY_OF_MONTH)
             ).show()
+        }
+
+        btnListLoketTerdampak.setOnClickListener {
+            startActivity(Intent(this, ListLoketTerdampakActivity::class.java))
+            finish()
         }
 
     }
