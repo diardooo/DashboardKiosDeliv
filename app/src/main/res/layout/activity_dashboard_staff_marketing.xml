@@ -254,7 +254,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            
+
             <androidx.cardview.widget.CardView
                 app:contentPadding="12dp"
                 app:cardElevation="1dp"
