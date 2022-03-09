@@ -158,6 +158,8 @@
                         android:background="#8F8F8F" />
 
 
+
+
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -187,22 +189,30 @@
                                     android:textColor="@color/white"
                                     android:layout_marginEnd="10dp" />
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="4,2 %"
-                                    android:layout_marginEnd="5dp"
-                                    android:layout_marginStart="145dp"
-                                    android:textColor="@color/white"/>
-
-                                <ImageView
-                                    android:id="@+id/indikator_total_transaksi"
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="13dp"
-                                    android:src="@drawable/icon_up"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
                                     android:layout_marginEnd="10dp"
-                                    android:layout_marginTop="13dp" />
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/total_transaksi_persen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="2,2 %"
+                                        android:textColor="@color/white"/>
+
+                                    <ImageView
+                                        android:id="@+id/indikator_total_transaksi"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="13dp"
+                                        android:src="@drawable/icon_up"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="13dp" />
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
@@ -212,7 +222,7 @@
                                  android:layout_height="wrap_content"
                                  android:fontFamily="@font/opensans_bold"
                                  android:gravity="center"
-                                 android:text="120.0000"
+                                 android:text="91.892"
                                  android:textColor="@color/white"
                                  android:textSize="40dp"/>
 
@@ -230,31 +240,59 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
 
-                                <TextView
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Rata - rata perbulan : "
-                                    android:textColor="#B3B3B3"
-                                    android:layout_marginBottom="10dp"
-                                    android:layout_marginStart="10dp"
-                                    android:fontFamily="@font/opensans_regular"/>
+                                    android:orientation="horizontal">
 
-                                <TextView
-                                    android:id="@+id/rata2_perbulan_total_transaksi"
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Average : "
+                                        android:textColor="#B3B3B3"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/rata2_total_transaksi"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="91.000"
+                                        android:textColor="#4CAF50"
+                                        android:fontFamily="@font/opensans_bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="115.200"
-                                    android:gravity="end"
-                                    android:layout_marginEnd="10dp"
-                                    android:textColor="#B3B3B3"
-                                    android:fontFamily="@font/opensans_bold"/>
+                                    android:orientation="horizontal"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Bulan Lalu : "
+                                        android:gravity="end"
+                                        android:textColor="#B3B3B3"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/total_transaksi_bulan_lalu"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="91.101"
+                                        android:layout_marginEnd="10dp"
+                                        android:textColor="#4CAF50"
+                                        android:fontFamily="@font/opensans_bold"/>
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
                         </LinearLayout>
-
-
-
+                        // TAMBAHAN
 
                     </androidx.cardview.widget.CardView>
 
@@ -297,7 +335,7 @@
                         android:layout_height="220dp"
                         android:layout_gravity="center"/>
 
-                    // TAMBAHAN
+                    // TAMBAHAN2
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -326,26 +364,58 @@
                                     android:textColor="@color/gray"
                                     android:layout_marginEnd="10dp" />
 
-                                <ImageView
-                                    android:id="@+id/indikator_transaksi_sukses"
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="13dp"
-                                    android:src="@drawable/icon_up"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
                                     android:layout_marginEnd="10dp"
-                                    android:layout_marginTop="13dp"
-                                    android:layout_marginStart="90dp" />
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/transaksi_sukses_persen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="2,1 %"
+                                        android:textColor="@color/gray"/>
+
+                                    <ImageView
+                                        android:id="@+id/indikator_transaksi_sukses"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="13dp"
+                                        android:src="@drawable/icon_up"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="13dp" />
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/transaksi_sukses_terbanyak"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/opensans_bold"
-                                android:gravity="center"
-                                android:text="PLN Pasca Bayar"
-                                android:textColor="@color/gray"
-                                android:textSize="30dp"/>
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/transaksi_sukses_terbanyak"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:gravity="center"
+                                    android:text="PLN Pasca Bayar"
+                                    android:textColor="@color/gray"
+                                    android:textSize="20dp"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="78.270"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:gravity="center"
+                                    android:textColor="#009688"
+                                    android:textSize="20dp"/>
+
+                            </LinearLayout>
 
                             <View
                                 android:layout_width="match_parent"
@@ -361,31 +431,61 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
 
-                                <TextView
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="87.1 %"
-                                    android:textColor="#404040"
-                                    android:layout_marginBottom="10dp"
-                                    android:layout_marginStart="10dp"
-                                    android:fontFamily="@font/opensans_regular"/>
+                                    android:orientation="horizontal">
 
-                                <TextView
-                                    android:id="@+id/jumlah_transaksi_sukses_terbanyak"
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Average : "
+                                        android:textColor="@color/gray"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/rata2_transaksi_sukses"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="77.000"
+                                        android:textColor="#4CAF50"
+                                        android:fontFamily="@font/opensans_bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="72.102"
-                                    android:gravity="end"
-                                    android:layout_marginEnd="10dp"
-                                    android:textColor="#404040"
-                                    android:fontFamily="@font/opensans_bold"/>
+                                    android:orientation="horizontal"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Bulan Lalu : "
+                                        android:gravity="end"
+                                        android:textColor="@color/gray"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/transaksi_sukses_bulan_lalu"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="77.756"
+                                        android:layout_marginEnd="10dp"
+                                        android:textColor="#4CAF50"
+                                        android:fontFamily="@font/opensans_bold"/>
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
-
+                    // TAMBAHAN2
 
 
                 </LinearLayout>
@@ -419,8 +519,7 @@
                         android:layout_height="220dp"
                         android:layout_gravity="center"/>
 
-
-
+                    // TAMBAHAN
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -449,26 +548,58 @@
                                     android:textColor="@color/gray"
                                     android:layout_marginEnd="10dp" />
 
-                                <ImageView
-                                    android:id="@+id/indikator_transaksi_gagal"
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="13dp"
-                                    android:src="@drawable/icon_up"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
                                     android:layout_marginEnd="10dp"
-                                    android:layout_marginTop="13dp"
-                                    android:layout_marginStart="90dp" />
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/transaksi_gagal_persen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="130 %"
+                                        android:textColor="@color/gray"/>
+
+                                    <ImageView
+                                        android:id="@+id/indikator_transaksi_gagal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="13dp"
+                                        android:src="@drawable/icon_down"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="13dp" />
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/transaksi_gagal_terbanyak"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/opensans_bold"
-                                android:gravity="center"
-                                android:text="PLN Pasca Bayar"
-                                android:textColor="@color/gray"
-                                android:textSize="30dp"/>
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:gravity="center"
+                                    android:text="PLN Pasca Bayar"
+                                    android:textColor="@color/gray"
+                                    android:textSize="20dp"/>
+
+                                <TextView
+                                    android:id="@+id/transaksi_gagal_terbanyak"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="1.493"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:gravity="center"
+                                    android:textColor="#600725"
+                                    android:textSize="20dp"/>
+
+                            </LinearLayout>
 
                             <View
                                 android:layout_width="match_parent"
@@ -484,33 +615,61 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
 
-                                <TextView
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="71 %"
-                                    android:textColor="#404040"
-                                    android:layout_marginBottom="10dp"
-                                    android:layout_marginStart="10dp"
-                                    android:fontFamily="@font/opensans_regular"/>
+                                    android:orientation="horizontal">
 
-                                <TextView
-                                    android:id="@+id/jumlah_transaksi_gal_terbanyak"
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Average : "
+                                        android:textColor="@color/gray"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/rata2_transaksi_gagal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="900"
+                                        android:textColor="#57152B"
+                                        android:fontFamily="@font/opensans_bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="1.439"
-                                    android:gravity="end"
-                                    android:layout_marginEnd="10dp"
-                                    android:textColor="#404040"
-                                    android:fontFamily="@font/opensans_bold"/>
+                                    android:orientation="horizontal"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Bulan Lalu : "
+                                        android:gravity="end"
+                                        android:textColor="@color/gray"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/transaksi_gagal_bulan_lalu"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="625"
+                                        android:layout_marginEnd="10dp"
+                                        android:textColor="#57152B"
+                                        android:fontFamily="@font/opensans_bold"/>
+
+                                </LinearLayout>
 
                             </LinearLayout>
 
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
-
-
-
+                    // TAMBAHAN
 
                 </LinearLayout>
 
@@ -551,25 +710,133 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/opensans_medium"
-                                android:text="Total Pendapatan Kotor (Rupiah)"
-                                android:textColor="@color/gray" />
+                                android:orientation="horizontal">
 
-                            <TextView
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_medium"
+                                    android:text="Total Pendapatan Kotor"
+                                    android:textColor="@color/gray"
+                                    android:layout_marginEnd="10dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginEnd="10dp"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/total_pendapatan_kotor_persen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="1,9 %"
+                                        android:textColor="@color/gray"/>
+
+                                    <ImageView
+                                        android:id="@+id/indikator_total_pendapatan_kotor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="13dp"
+                                        android:src="@drawable/icon_down"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="13dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/total_pendapatan_kotor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp 125.416.860"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:gravity="center"
+                                    android:textColor="@color/gray"
+                                    android:textSize="26dp"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7dp"
+                                android:background="@color/gray"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
                                 android:layout_marginTop="5dp"
-                                android:layout_marginBottom="15dp"
-                                android:fontFamily="@font/opensans_bold"
-                                android:gravity="center"
-                                android:text="Rp 128.408.550,00"
-                                android:textColor="@color/gray"
-                                android:textSize="26dp" />
+                                android:layout_marginBottom="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Average : "
+                                        android:textSize="11dp"
+                                        android:textColor="@color/gray"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/rata2_total_pendapatan_kotor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rp 125.000.000"
+                                        android:textSize="11dp"
+                                        android:textColor="#57152B"
+                                        android:fontFamily="@font/opensans_bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Bulan lalu : "
+                                        android:textSize="11dp"
+                                        android:gravity="end"
+                                        android:textColor="@color/gray"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/total_pendapatan_kotor_bulan_lalu"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rp 127.064.770"
+                                        android:textSize="11dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:textColor="#57152B"
+                                        android:fontFamily="@font/opensans_bold"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -594,25 +861,133 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/opensans_medium"
-                                android:text="Total Komisi (Rupiah)"
-                                android:textColor="@color/gray" />
+                                android:orientation="horizontal">
 
-                            <TextView
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_medium"
+                                    android:text="Total Komisi"
+                                    android:textColor="@color/gray"
+                                    android:layout_marginEnd="10dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginEnd="10dp"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/total_komisi_persen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="1,9 %"
+                                        android:textColor="@color/gray"/>
+
+                                    <ImageView
+                                        android:id="@+id/indikator_total_komisi"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="13dp"
+                                        android:src="@drawable/icon_down"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="13dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/total_komisi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp 62.814.500"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:gravity="center"
+                                    android:textColor="@color/gray"
+                                    android:textSize="26dp"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7dp"
+                                android:background="@color/gray"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
                                 android:layout_marginTop="5dp"
-                                android:layout_marginBottom="15dp"
-                                android:fontFamily="@font/opensans_bold"
-                                android:gravity="center"
-                                android:text="Rp 62.601.300,00"
-                                android:textColor="@color/gray"
-                                android:textSize="26dp" />
+                                android:layout_marginBottom="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Average : "
+                                        android:textSize="11dp"
+                                        android:textColor="@color/gray"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/rata2_total_komisi"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rp 62.000.000"
+                                        android:textSize="11dp"
+                                        android:textColor="#57152B"
+                                        android:fontFamily="@font/opensans_bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Bulan lalu : "
+                                        android:textSize="11dp"
+                                        android:gravity="end"
+                                        android:textColor="@color/gray"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/total_komisi_bulan_lalu"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rp 63.563.750"
+                                        android:textSize="11dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:textColor="#57152B"
+                                        android:fontFamily="@font/opensans_bold"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -637,25 +1012,133 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/opensans_medium"
-                                android:text="Pendapatan Kios Deliv (Rupiah)"
-                                android:textColor="@color/gray" />
+                                android:orientation="horizontal">
 
-                            <TextView
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_medium"
+                                    android:text="Total Pendapatan Bersih"
+                                    android:textColor="@color/gray"
+                                    android:layout_marginEnd="10dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginEnd="10dp"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:id="@+id/total_pendapatan_bersih_persen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:text="1,2 %"
+                                        android:textColor="@color/gray"/>
+
+                                    <ImageView
+                                        android:id="@+id/indikator_total_pendapatan_bersih"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="13dp"
+                                        android:src="@drawable/icon_down"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="13dp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/total_pendapatan_bersih"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp 62.033.860"
+                                    android:fontFamily="@font/opensans_bold"
+                                    android:gravity="center"
+                                    android:textColor="@color/gray"
+                                    android:textSize="26dp"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7dp"
+                                android:background="@color/gray"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
                                 android:layout_marginTop="5dp"
-                                android:layout_marginBottom="15dp"
-                                android:fontFamily="@font/opensans_bold"
-                                android:gravity="center"
-                                android:text="Rp 65.807.250.00"
-                                android:textColor="@color/gray"
-                                android:textSize="26dp" />
+                                android:layout_marginBottom="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Average : "
+                                        android:textSize="11dp"
+                                        android:textColor="@color/gray"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/rata2_total_pendapatan_bersih"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rp 61.500.000"
+                                        android:textSize="11dp"
+                                        android:textColor="#57152B"
+                                        android:fontFamily="@font/opensans_bold" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="end">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Bulan lalu : "
+                                        android:textSize="11dp"
+                                        android:gravity="end"
+                                        android:textColor="@color/gray"
+                                        android:fontFamily="@font/opensans_regular"/>
+
+                                    <TextView
+                                        android:id="@+id/total_pendapatan_bersih_bulan_lalu"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Rp 62.864.770"
+                                        android:textSize="11dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:textColor="#57152B"
+                                        android:fontFamily="@font/opensans_bold"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
