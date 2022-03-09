@@ -171,27 +171,90 @@
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
-                            <TextView
+                            // TAMBAHAN
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/opensans_medium"
-                                android:text="Total Transaksi"
-                                android:textColor="@color/white" />
+                                android:orientation="horizontal">
 
-                            <TextView
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_medium"
+                                    android:text="Total Transaksi"
+                                    android:textColor="@color/white"
+                                    android:layout_marginEnd="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="4,2 %"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginStart="145dp"
+                                    android:textColor="@color/white"/>
+
+                                <ImageView
+                                    android:id="@+id/indikator_total_transaksi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="13dp"
+                                    android:src="@drawable/icon_up"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginTop="13dp" />
+
+                            </LinearLayout>
+
+                             <TextView
+                                 android:id="@+id/total_transaksi"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:fontFamily="@font/opensans_bold"
+                                 android:gravity="center"
+                                 android:text="120.0000"
+                                 android:textColor="@color/white"
+                                 android:textSize="40dp"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7dp"
+                                android:background="#AFAFAF"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginBottom="20dp"
-                                android:fontFamily="@font/opensans_bold"
-                                android:gravity="center"
-                                android:text="120.0000"
-                                android:textColor="@color/white"
-                                android:textSize="40dp" />
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rata - rata perbulan : "
+                                    android:textColor="#B3B3B3"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/opensans_regular"/>
+
+                                <TextView
+                                    android:id="@+id/rata2_perbulan_total_transaksi"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="115.200"
+                                    android:gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:textColor="#B3B3B3"
+                                    android:fontFamily="@font/opensans_bold"/>
+
+                            </LinearLayout>
 
                         </LinearLayout>
+
+
+
 
                     </androidx.cardview.widget.CardView>
 
@@ -234,11 +297,96 @@
                         android:layout_height="220dp"
                         android:layout_gravity="center"/>
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/chart_terbanyak_legend"
+                    // TAMBAHAN
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        />
+                        android:layout_margin="4dp"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardBackgroundColor="#61d4b3"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_medium"
+                                    android:text="Transaksi Sukses Terbanyak"
+                                    android:textColor="@color/gray"
+                                    android:layout_marginEnd="10dp" />
+
+                                <ImageView
+                                    android:id="@+id/indikator_transaksi_sukses"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="13dp"
+                                    android:src="@drawable/icon_up"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginTop="13dp"
+                                    android:layout_marginStart="90dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/transaksi_sukses_terbanyak"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/opensans_bold"
+                                android:gravity="center"
+                                android:text="PLN Pasca Bayar"
+                                android:textColor="@color/gray"
+                                android:textSize="30dp"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7dp"
+                                android:background="@color/gray"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="87.1 %"
+                                    android:textColor="#404040"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/opensans_regular"/>
+
+                                <TextView
+                                    android:id="@+id/jumlah_transaksi_sukses_terbanyak"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="72.102"
+                                    android:gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:textColor="#404040"
+                                    android:fontFamily="@font/opensans_bold"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
 
                 </LinearLayout>
 
@@ -271,11 +419,98 @@
                         android:layout_height="220dp"
                         android:layout_gravity="center"/>
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_chart_terbanyak_legend"
+
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        />
+                        android:layout_margin="4dp"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardBackgroundColor="#f0134d"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/opensans_medium"
+                                    android:text="Transaksi Gagal Terbanyak"
+                                    android:textColor="@color/gray"
+                                    android:layout_marginEnd="10dp" />
+
+                                <ImageView
+                                    android:id="@+id/indikator_transaksi_gagal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="13dp"
+                                    android:src="@drawable/icon_up"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginTop="13dp"
+                                    android:layout_marginStart="90dp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/transaksi_gagal_terbanyak"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/opensans_bold"
+                                android:gravity="center"
+                                android:text="PLN Pasca Bayar"
+                                android:textColor="@color/gray"
+                                android:textSize="30dp"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7dp"
+                                android:background="@color/gray"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="71 %"
+                                    android:textColor="#404040"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/opensans_regular"/>
+
+                                <TextView
+                                    android:id="@+id/jumlah_transaksi_gal_terbanyak"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="1.439"
+                                    android:gravity="end"
+                                    android:layout_marginEnd="10dp"
+                                    android:textColor="#404040"
+                                    android:fontFamily="@font/opensans_bold"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
 
                 </LinearLayout>
 

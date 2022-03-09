@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.github.mikephil.charting.charts.PieChart
@@ -25,7 +26,8 @@ class DashboardDirekturActivity : AppCompatActivity() {
     private lateinit var btnDatePickerFrom : CardView
     private lateinit var tvDatePickerTo : TextView
     private lateinit var btnDatePickerTo : CardView
-//    private lateinit val asd
+
+    private lateinit var indikator : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +42,10 @@ class DashboardDirekturActivity : AppCompatActivity() {
         btnDatePickerFrom = findViewById(R.id.btn_date_form_dsb_direktur)
         tvDatePickerTo = findViewById(R.id.tv_date_to_dsb_direktur)
         btnDatePickerTo = findViewById(R.id.btn_date_to_dsb_direktur)
+
+        //Coba ganti resource indikator
+        indikator = findViewById(R.id.indikator_total_transaksi)
+        indikator.setImageResource(R.drawable.icon_up)
 
         //DATE PICKER
         val datePickerFrom = Calendar.getInstance()
