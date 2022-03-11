@@ -81,7 +81,6 @@ class ProgressLoketActivity : AppCompatActivity() {
 
         // X Axis values
         val xValues = ArrayList<String>()
-        xValues.add("April, 2021")
         xValues.add("May, 2021")
         xValues.add("Jun, 2021")
         xValues.add("Jul, 2021")
@@ -92,20 +91,21 @@ class ProgressLoketActivity : AppCompatActivity() {
         xValues.add("Dec, 2021")
         xValues.add("Jan, 2022")
         xValues.add("Feb, 2022")
+        xValues.add("Mar, 2022")
 
         // y axis values or bar data
         val barEntry = ArrayList<BarEntry>()
-        barEntry.add(BarEntry(107F, 0))
-        barEntry.add(BarEntry(86F, 1))
-        barEntry.add(BarEntry(80F, 2))
-        barEntry.add(BarEntry(55F, 3))
-        barEntry.add(BarEntry(40F, 4))
-        barEntry.add(BarEntry(33F, 5))
-        barEntry.add(BarEntry(34F, 6))
-        barEntry.add(BarEntry(28F, 7))
-        barEntry.add(BarEntry(24F, 8))
-        barEntry.add(BarEntry(161F, 9))
-        barEntry.add(BarEntry(71F, 10))
+        barEntry.add(BarEntry(86F, 0))
+        barEntry.add(BarEntry(80F, 1))
+        barEntry.add(BarEntry(55F, 2))
+        barEntry.add(BarEntry(40F, 3))
+        barEntry.add(BarEntry(33F, 4))
+        barEntry.add(BarEntry(34F, 5))
+        barEntry.add(BarEntry(28F, 6))
+        barEntry.add(BarEntry(24F, 7))
+        barEntry.add(BarEntry(161F, 8))
+        barEntry.add(BarEntry(190F, 9))
+        barEntry.add(BarEntry(58F, 10))
 
         // Bar data set
         val barDataSet = BarDataSet(barEntry, "Bar Chart")

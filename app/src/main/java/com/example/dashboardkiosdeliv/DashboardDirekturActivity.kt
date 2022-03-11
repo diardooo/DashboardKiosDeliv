@@ -98,13 +98,15 @@ class DashboardDirekturActivity : AppCompatActivity() {
         // SETUP PIE CHAR ENTRIES
         val xValues = ArrayList<String >()
         xValues.add("PLN Pascabayar")
+        xValues.add("Pulsa Prabayar")
         xValues.add("PLN Prabayar")
         xValues.add("Lainnya")
 
         val pieChartEntry = ArrayList<Entry>()
-        pieChartEntry.add( Entry(87.12F, 0 ))
-        pieChartEntry.add( Entry(6.76f, 1 ))
-        pieChartEntry.add( Entry(5.45f, 2 ))
+        pieChartEntry.add( Entry(87.17F, 0 ))
+        pieChartEntry.add( Entry(4.71f, 1 ))
+        pieChartEntry.add( Entry(4.02f, 2 ))
+        pieChartEntry.add( Entry(4.10f, 3 ))
 
         // SETUP PIE CHART ANIMATION
         pieChart1.animateXY(1000, 1000)
@@ -153,11 +155,21 @@ class DashboardDirekturActivity : AppCompatActivity() {
         // SETUP PIE CHAR ENTRIES
         val xValues = ArrayList<String >()
         xValues.add("PLN Pascabayar")
+        xValues.add("Pulsa Prabayar")
+        xValues.add("Paket Data")
         xValues.add("PLN Prabayar")
+        xValues.add("E-Money")
+        xValues.add("PDAM")
+        xValues.add("Lainnya")
 
         val pieChartEntry = ArrayList<Entry>()
-        pieChartEntry.add( Entry(71f, 0))
-        pieChartEntry.add( Entry(28f, 1 ))
+        pieChartEntry.add( Entry(71.13f, 0))
+        pieChartEntry.add( Entry(10.20f, 1 ))
+        pieChartEntry.add( Entry(5.53f, 2 ))
+        pieChartEntry.add( Entry(5.10f, 3 ))
+        pieChartEntry.add( Entry(3.67f, 4 ))
+        pieChartEntry.add( Entry(2.86f, 5 ))
+        pieChartEntry.add( Entry(1.52f, 6 ))
 
         // SETUP PIE CHART ANIMATION
         pieChart2.animateXY(1000, 1000)

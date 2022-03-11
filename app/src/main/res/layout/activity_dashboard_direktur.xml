@@ -397,7 +397,6 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/transaksi_sukses_terbanyak"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/opensans_bold"
@@ -407,6 +406,7 @@
                                     android:textSize="20dp"/>
 
                                 <TextView
+                                    android:id="@+id/transaksi_sukses_terbanyak"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="78.270"
