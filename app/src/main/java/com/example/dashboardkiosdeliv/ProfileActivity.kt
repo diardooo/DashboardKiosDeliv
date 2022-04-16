@@ -32,7 +32,7 @@ class ProfileActivity : AppCompatActivity() {
         //Menampilkan data profile
         binding?.tvNamaUser?.text = profile.getString("nama", null)
         binding?.tvEmail?.text = profile.getString("email", null)
-        binding?.tvLevelUser?.text = if (profile.getString("level", null) == "1") "DIREKTUR" else "STAFF MARKETING"
+        binding?.tvLevelUser?.text = if (profile.getString("level", null) == "1") "DIREKTUR" else "MARKETING"
 
         if (binding?.tvLevelUser?.text == "DIREKTUR"){
             binding?.tvLevelUser?.setTextColor(Color.parseColor("#F44336"))

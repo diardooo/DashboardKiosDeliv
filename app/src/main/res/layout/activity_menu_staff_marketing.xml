@@ -15,7 +15,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="15dp"
         android:fontFamily="@font/opensans_extrabold"
-        android:text="MENU STAFF MARKETING"
+        android:text="MENU MARKETING"
         android:textColor="@color/white"
         android:textSize="24sp" />
 
