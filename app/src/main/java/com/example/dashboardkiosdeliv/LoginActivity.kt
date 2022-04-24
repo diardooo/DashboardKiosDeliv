@@ -72,16 +72,16 @@ class LoginActivity : AppCompatActivity() {
                         getSharedPreferences("login_session", MODE_PRIVATE)
                             .edit()
                             .putString("email", response.body()?.payload?.email)
-                            .putString("nama", response.body()?.payload?.nama)
-                            .putString("level", response.body()?.payload?.level_user)
-                            .putString("foto", response.body()?.payload?.foto)
+                            .putString("name", response.body()?.payload?.name)
+                            .putString("level", response.body()?.payload?.level)
+                            .putString("photo", response.body()?.payload?.photo)
                             .apply()
 
-                        if (response.body()?.payload?.level_user == "1"){
+                        if (response.body()?.payload?.level == "1"){
                             startActivity(Intent(this@LoginActivity, MenuDirekturActivity::class.java))
                             finish()
                         }
-                        if (response.body()?.payload?.level_user == "2"){
+                        if (response.body()?.payload?.level == "2"){
                             startActivity(Intent(this@LoginActivity, MenuStaffMarketingActivity::class.java))
                             finish()
                         }
