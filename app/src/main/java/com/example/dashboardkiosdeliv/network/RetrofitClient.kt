@@ -1,20 +1,24 @@
 package com.example.dashboardkiosdeliv.network
 
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
-class RetrofitClient {
+object RetrofitClient {
 
-    private fun getRetrofitClient(): Retrofit{
+    val okhttp = OkHttpClient.Builder()
+        .connectTimeout(300, TimeUnit.SECONDS)
+        .writeTimeout(300, TimeUnit.SECONDS)
+        .readTimeout(300, TimeUnit.SECONDS)
+        .build()
 
-        return Retrofit.Builder()
-            .baseUrl("http://192.168.1.6/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
+    val retrofit = Retrofit.Builder()
+        .baseUrl("http://192.168.1.3/")
+        .addConverterFactory(GsonConverterFactory.create())
+        .client(okhttp)
+        .build()
 
-    fun getInstance(): APIClient {
+    fun myApiClient() = retrofit.create(APIClient::class.java)
 
-        return getRetrofitClient().create(APIClient::class.java)
-    }
 }

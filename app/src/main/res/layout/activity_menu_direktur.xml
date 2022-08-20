@@ -20,162 +20,167 @@
         android:textColor="@color/white"
         android:textSize="24sp" />
 
-    <GridLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
         android:layout_below="@+id/title_direktur"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
-        android:alignmentMode="alignMargins"
-        android:columnCount="2"
-        android:columnOrderPreserved="false"
-        android:rowCount="2">
+        android:layout_centerHorizontal="true">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btn_dashboard_direktur"
-            android:layout_width="155dp"
-            android:layout_height="155dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/gray"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_direktur"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="2">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_dashboard_direktur"
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/gray"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/icon_dashboard" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/opensans_bold"
-                    android:text="DASHBOARD"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_dashboard" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="DASHBOARD"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
-        </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btn_progres_loket_direktur"
-            android:layout_width="155dp"
-            android:layout_height="155dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/gray"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
+            </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_progres_loket_direktur"
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/gray"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/icon_progres_loket" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/opensans_bold"
-                    android:text="PROGRES LOKET"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_progres_loket" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="PROGRES LOKET"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
-        </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btn_deposit_direktur"
-            android:layout_width="155dp"
-            android:layout_height="155dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/gray"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
+            </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_deposit_direktur"
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/gray"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@drawable/icon_deposit" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/opensans_bold"
-                    android:text="INFORMASI"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/icon_deposit" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/opensans_bold"
-                    android:text="DEPOSIT"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="INFORMASI"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="DEPOSIT"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
-        </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btn_profile_direktur"
-            android:layout_width="155dp"
-            android:layout_height="155dp"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/gray"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="5dp">
+            </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_profile_direktur"
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/gray"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/icon_user" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/opensans_bold"
-                    android:text="PROFILE"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_user" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/opensans_bold"
+                        android:text="PROFILE"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
-        </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
-    </GridLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:layout_width="wrap_content"

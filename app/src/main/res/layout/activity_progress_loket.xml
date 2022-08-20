@@ -81,7 +81,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginBottom="10dp"
                         android:orientation="horizontal"
                         app:layout_scrollFlags="scroll|enterAlways">
 
@@ -107,7 +106,7 @@
                                 android:drawableStart="@drawable/icon_date2"
                                 android:drawablePadding="12dp"
                                 android:fontFamily="@font/opensans_medium"
-                                android:text="01-01-2022"
+                                android:text="2022-01-01"
                                 android:textColor="@color/white" />
 
                         </androidx.cardview.widget.CardView>
@@ -143,12 +142,21 @@
                                 android:drawableStart="@drawable/icon_date2"
                                 android:drawablePadding="12dp"
                                 android:fontFamily="@font/opensans_medium"
-                                android:text="01-01-2022"
+                                android:text="2022-01-01"
                                 android:textColor="@color/white" />
 
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_apply_tanggal_progres_loket"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Apply"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:textSize="11sp"
+                        android:layout_gravity="center"/>
 
                 </LinearLayout>
 
@@ -170,7 +178,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Pertumbuhan Loket"
+                            android:text="Pertumbuhan Loket dalam 1 Tahun"
                             android:fontFamily="@font/opensans_bold"
                             android:textColor="@color/black"
                             android:layout_marginBottom="10dp"/>
@@ -221,14 +229,13 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="10dp"
-                                            android:text="69,4 %"
+                                            android:text="0 %"
                                             android:textColor="@color/gray"/>
 
                                         <ImageView
                                             android:id="@+id/indikator_tren_loket"
                                             android:layout_width="wrap_content"
                                             android:layout_height="13dp"
-                                            android:src="@drawable/icon_down"
                                             android:layout_marginStart="5dp"
                                             android:layout_marginTop="13dp" />
 
@@ -245,7 +252,7 @@
                                         android:id="@+id/tren_bulan_pertumbuhan_loket"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="58"
+                                        android:text=""
                                         android:fontFamily="@font/opensans_bold"
                                         android:gravity="center"
                                         android:textColor="#009688"
@@ -275,7 +282,7 @@
                                         <TextView
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Average : "
+                                            android:text="Rata-rata pertumbuhan : "
                                             android:textColor="@color/gray"
                                             android:layout_marginBottom="10dp"
                                             android:layout_marginStart="10dp"
@@ -285,7 +292,7 @@
                                             android:id="@+id/rata2_tren_loket"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="60"
+                                            android:text="214"
                                             android:textColor="#4CAF50"
                                             android:fontFamily="@font/opensans_bold" />
 
@@ -306,10 +313,10 @@
                                             android:fontFamily="@font/opensans_regular"/>
 
                                         <TextView
-                                            android:id="@+id/tren_pertumbuhan_loket_bulan_lalu"
+                                            android:id="@+id/tren_pertumbuhan_loket_bulan_laluu"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="190"
+                                            android:text=""
                                             android:layout_marginEnd="10dp"
                                             android:textColor="#4CAF50"
                                             android:fontFamily="@font/opensans_bold"/>
@@ -362,7 +369,7 @@
                                     android:layout_marginStart="10dp"
                                     android:layout_marginTop="10dp"
                                     android:fontFamily="@font/opensans_medium"
-                                    android:text="Jumlah Loket"
+                                    android:text="Total Keseluruhan Jumlah Loket"
                                     android:textColor="@color/white"
                                     android:layout_marginEnd="10dp" />
 
@@ -374,7 +381,7 @@
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/opensans_bold"
                                     android:gravity="center"
-                                    android:text="2.550"
+                                    android:text=""
                                     android:textColor="@color/white"
                                     android:textSize="40dp"/>
 
@@ -394,437 +401,6 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="4dp" />
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
-                        app:cardCornerRadius="8dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginTop="10dp"
-                                    android:fontFamily="@font/opensans_medium"
-                                    android:text="Jumlah Loket Bertransaksi"
-                                    android:textColor="@color/white"
-                                    android:layout_marginEnd="10dp" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:layout_marginEnd="10dp"
-                                    android:gravity="end">
-
-                                    <TextView
-                                        android:id="@+id/loket_bertransaksi_persen"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="10dp"
-                                        android:text="1,6 %"
-                                        android:textColor="@color/white"/>
-
-                                    <ImageView
-                                        android:id="@+id/indikator_loket_bertransaksi"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="13dp"
-                                        android:src="@drawable/icon_up"
-                                        android:layout_marginStart="5dp"
-                                        android:layout_marginTop="13dp" />
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/jumlah_loket_bertransaksi"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="419"
-                                    android:fontFamily="@font/opensans_bold"
-                                    android:gravity="center"
-                                    android:textColor="@color/white"
-                                    android:textSize="40dp"/>
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="0.7dp"
-                                android:background="@color/white"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginBottom="5dp"/>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Average : "
-                                        android:textColor="@color/white"
-                                        android:layout_marginBottom="10dp"
-                                        android:layout_marginStart="10dp"
-                                        android:fontFamily="@font/opensans_regular"/>
-
-                                    <TextView
-                                        android:id="@+id/rata2_loket_bertransaksi"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="400"
-                                        android:textColor="#4CAF50"
-                                        android:fontFamily="@font/opensans_bold" />
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="end">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Bulan Lalu : "
-                                        android:gravity="end"
-                                        android:textColor="@color/white"
-                                        android:fontFamily="@font/opensans_regular"/>
-
-                                    <TextView
-                                        android:id="@+id/loket_bertransaksi_bulan_lalu"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="413"
-                                        android:layout_marginEnd="10dp"
-                                        android:textColor="#4CAF50"
-                                        android:fontFamily="@font/opensans_bold"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="4dp" />
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
-                        app:cardCornerRadius="8dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginTop="10dp"
-                                    android:fontFamily="@font/opensans_medium"
-                                    android:text="Jumlah Loket Terdampak Error"
-                                    android:textColor="@color/white"
-                                    android:layout_marginEnd="10dp" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:layout_marginEnd="10dp"
-                                    android:gravity="end">
-
-                                    <TextView
-                                        android:id="@+id/loket_terdampak_persen"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="10dp"
-                                        android:text="2,9 %"
-                                        android:textColor="@color/white"/>
-
-                                    <ImageView
-                                        android:id="@+id/indikator_loket_terdampak"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="13dp"
-                                        android:src="@drawable/icon_up"
-                                        android:layout_marginStart="5dp"
-                                        android:layout_marginTop="13dp" />
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/jumlah_loket_terdampak"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="207"
-                                    android:fontFamily="@font/opensans_bold"
-                                    android:gravity="center"
-                                    android:textColor="@color/white"
-                                    android:textSize="40dp"/>
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="0.7dp"
-                                android:background="@color/white"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginBottom="5dp"/>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Average : "
-                                        android:textColor="@color/white"
-                                        android:layout_marginBottom="10dp"
-                                        android:layout_marginStart="10dp"
-                                        android:fontFamily="@font/opensans_regular"/>
-
-                                    <TextView
-                                        android:id="@+id/rata2_loket_terdampak"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="200"
-                                        android:textColor="#4CAF50"
-                                        android:fontFamily="@font/opensans_bold" />
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="end">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Bulan Lalu : "
-                                        android:gravity="end"
-                                        android:textColor="@color/white"
-                                        android:fontFamily="@font/opensans_regular"/>
-
-                                    <TextView
-                                        android:id="@+id/loket_terdampak_bulan_lalu"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="201"
-                                        android:layout_marginEnd="10dp"
-                                        android:textColor="#4CAF50"
-                                        android:fontFamily="@font/opensans_bold"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="4dp" />
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="4dp"
-                        android:foreground="?attr/selectableItemBackgroundBorderless"
-                        app:cardBackgroundColor="@color/gray"
-                        app:cardCornerRadius="8dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="10dp"
-                                    android:layout_marginTop="10dp"
-                                    android:fontFamily="@font/opensans_medium"
-                                    android:text="Presentase Loket Aktif"
-                                    android:textColor="@color/white"
-                                    android:layout_marginEnd="10dp" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:layout_marginEnd="10dp"
-                                    android:gravity="end">
-
-                                    <TextView
-                                        android:id="@+id/presentase_loket_aktif_persen"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="10dp"
-                                        android:text="0,4 %"
-                                        android:textColor="@color/white"/>
-
-                                    <ImageView
-                                        android:id="@+id/indikator_presentase_loket_aktif"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="13dp"
-                                        android:src="@drawable/icon_up"
-                                        android:layout_marginStart="5dp"
-                                        android:layout_marginTop="13dp" />
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/presentase_loket_aktif"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="17,8%"
-                                    android:fontFamily="@font/opensans_bold"
-                                    android:gravity="center"
-                                    android:textColor="@color/white"
-                                    android:textSize="40dp"/>
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="0.7dp"
-                                android:background="@color/white"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginBottom="5dp"/>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Average : "
-                                        android:textColor="@color/white"
-                                        android:layout_marginBottom="10dp"
-                                        android:layout_marginStart="10dp"
-                                        android:fontFamily="@font/opensans_regular"/>
-
-                                    <TextView
-                                        android:id="@+id/rata2_presentase_loket_aktif"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="17,5%"
-                                        android:textColor="#4CAF50"
-                                        android:fontFamily="@font/opensans_bold" />
-
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="end">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Bulan Lalu : "
-                                        android:gravity="end"
-                                        android:textColor="@color/white"
-                                        android:fontFamily="@font/opensans_regular"/>
-
-                                    <TextView
-                                        android:id="@+id/presentase_loket_aktif_bulan_lalu"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="17,4%"
-                                        android:layout_marginEnd="10dp"
-                                        android:textColor="#4CAF50"
-                                        android:fontFamily="@font/opensans_bold"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
@@ -879,30 +455,30 @@
                                 android:textColor="@color/gray"
                                 android:layout_marginEnd="10dp" />
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginEnd="10dp"
-                                android:gravity="end">
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_marginEnd="10dp"-->
+<!--                                android:gravity="end">-->
 
-                                <TextView
-                                    android:id="@+id/akuisisi_via_admin_persen"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="20 %"
-                                    android:textColor="@color/gray"/>
+<!--                                <TextView-->
+<!--                                    android:id="@+id/akuisisi_via_admin_persen"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginTop="10dp"-->
+<!--                                    android:text="20 %"-->
+<!--                                    android:textColor="@color/gray"/>-->
 
-                                <ImageView
-                                    android:id="@+id/indikator_akuisisi_via_admin"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="13dp"
-                                    android:src="@drawable/icon_up"
-                                    android:layout_marginStart="5dp"
-                                    android:layout_marginTop="13dp" />
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/indikator_akuisisi_via_admin"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="13dp"-->
+<!--                                    android:src="@drawable/icon_up"-->
+<!--                                    android:layout_marginStart="5dp"-->
+<!--                                    android:layout_marginTop="13dp" />-->
 
-                            </LinearLayout>
+<!--                            </LinearLayout>-->
 
                         </LinearLayout>
 
@@ -915,7 +491,7 @@
                                 android:id="@+id/akuisisi_via_admin"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="5"
+                                android:text=""
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:textColor="@color/gray"
@@ -945,7 +521,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Average : "
+                                    android:text="Rata-rata : "
                                     android:textColor="@color/gray"
                                     android:layout_marginBottom="10dp"
                                     android:layout_marginStart="10dp"
@@ -955,7 +531,7 @@
                                     android:id="@+id/rata2_akuisisi_via_admin"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="4"
+                                    android:text="5"
                                     android:textColor="#4CAF50"
                                     android:fontFamily="@font/opensans_bold" />
 
@@ -979,7 +555,7 @@
                                     android:id="@+id/akuisisi_via_admin_bulan_lalu"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="4"
+                                    android:text=""
                                     android:layout_marginEnd="10dp"
                                     android:textColor="#4CAF50"
                                     android:fontFamily="@font/opensans_bold"/>
@@ -1021,34 +597,34 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/opensans_bold"
-                                android:text="Via Website"
+                                android:text="Via Landing Page"
                                 android:textColor="@color/gray"
                                 android:layout_marginEnd="10dp" />
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginEnd="10dp"
-                                android:gravity="end">
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_marginEnd="10dp"-->
+<!--                                android:gravity="end">-->
 
-                                <TextView
-                                    android:id="@+id/akuisisi_via_website_persen"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="35 %"
-                                    android:textColor="@color/gray"/>
+<!--                                <TextView-->
+<!--                                    android:id="@+id/akuisisi_via_website_persen"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginTop="10dp"-->
+<!--                                    android:text="35 %"-->
+<!--                                    android:textColor="@color/gray"/>-->
 
-                                <ImageView
-                                    android:id="@+id/indikator_akuisisi_website_admin"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="13dp"
-                                    android:src="@drawable/icon_down"
-                                    android:layout_marginStart="5dp"
-                                    android:layout_marginTop="13dp" />
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/indikator_akuisisi_website_admin"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="13dp"-->
+<!--                                    android:src="@drawable/icon_down"-->
+<!--                                    android:layout_marginStart="5dp"-->
+<!--                                    android:layout_marginTop="13dp" />-->
 
-                            </LinearLayout>
+<!--                            </LinearLayout>-->
 
                         </LinearLayout>
 
@@ -1061,7 +637,7 @@
                                 android:id="@+id/akuisisi_via_website"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="2"
+                                android:text=""
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:textColor="@color/gray"
@@ -1091,7 +667,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Average : "
+                                    android:text="Rata-rata : "
                                     android:textColor="@color/gray"
                                     android:layout_marginBottom="10dp"
                                     android:layout_marginStart="10dp"
@@ -1101,7 +677,7 @@
                                     android:id="@+id/rata2_akuisisi_via_website"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="3"
+                                    android:text="4"
                                     android:textColor="#4CAF50"
                                     android:fontFamily="@font/opensans_bold" />
 
@@ -1125,7 +701,7 @@
                                     android:id="@+id/akuisisi_via_website_bulan_lalu"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="3"
+                                    android:text=""
                                     android:layout_marginEnd="10dp"
                                     android:textColor="#4CAF50"
                                     android:fontFamily="@font/opensans_bold"/>
@@ -1167,34 +743,34 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/opensans_bold"
-                                android:text="Via Mobile"
+                                android:text="Via Mobile App"
                                 android:textColor="@color/gray"
                                 android:layout_marginEnd="10dp" />
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginEnd="10dp"
-                                android:gravity="end">
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:layout_marginEnd="10dp"-->
+<!--                                android:gravity="end">-->
 
-                                <TextView
-                                    android:id="@+id/akuisisi_via_mobile_persen"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:text="17 %"
-                                    android:textColor="@color/gray"/>
+<!--                                <TextView-->
+<!--                                    android:id="@+id/akuisisi_via_mobile_persen"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginTop="10dp"-->
+<!--                                    android:text="17 %"-->
+<!--                                    android:textColor="@color/gray"/>-->
 
-                                <ImageView
-                                    android:id="@+id/indikator_akuisisi_via_mobile"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="13dp"
-                                    android:src="@drawable/icon_up"
-                                    android:layout_marginStart="5dp"
-                                    android:layout_marginTop="13dp" />
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/indikator_akuisisi_via_mobile"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="13dp"-->
+<!--                                    android:src="@drawable/icon_up"-->
+<!--                                    android:layout_marginStart="5dp"-->
+<!--                                    android:layout_marginTop="13dp" />-->
 
-                            </LinearLayout>
+<!--                            </LinearLayout>-->
 
                         </LinearLayout>
 
@@ -1207,7 +783,7 @@
                                 android:id="@+id/akuisisi_via_mobile"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="189"
+                                android:text=""
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
                                 android:textColor="@color/gray"
@@ -1237,7 +813,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Average : "
+                                    android:text="Rata-rata : "
                                     android:textColor="@color/gray"
                                     android:layout_marginBottom="10dp"
                                     android:layout_marginStart="10dp"
@@ -1247,7 +823,7 @@
                                     android:id="@+id/rata2_akuisisi_via_mobile"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="180"
+                                    android:text="193"
                                     android:textColor="#4CAF50"
                                     android:fontFamily="@font/opensans_bold" />
 
@@ -1271,7 +847,7 @@
                                     android:id="@+id/akuisisi_via_mobile_bulan_lalu"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="159"
+                                    android:text=""
                                     android:layout_marginEnd="10dp"
                                     android:textColor="#4CAF50"
                                     android:fontFamily="@font/opensans_bold"/>

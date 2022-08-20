@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -34,6 +37,9 @@ android {
         jvmTarget = '1.8'
     }
 
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
@@ -60,4 +66,9 @@ dependencies {
     //Photo Profile
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Parcelize
+    def room_version = "2.2.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 }

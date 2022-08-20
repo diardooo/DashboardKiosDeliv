@@ -32,15 +32,14 @@ class LoginActivity : AppCompatActivity() {
             if (profile.getString("level", null) == "1"){
                 startActivity(Intent(this,MenuDirekturActivity::class.java))
                 finish()
-
             }
             if (profile.getString("level", null) == "2"){
                 startActivity(Intent(this, MenuStaffMarketingActivity::class.java))
                 finish()
-
             }
         }
 
+        //Event login
         binding!!.btnLogin.setOnClickListener {
             email = binding!!.etUsernameLogin.text.toString()
             password = binding!!.etPasswordLogin.text.toString()
@@ -61,27 +60,27 @@ class LoginActivity : AppCompatActivity() {
 
     private fun getData(){
 
-        val api = RetrofitClient().getInstance()
-        api.login(email, password).enqueue(object : Callback<ResponseLogin>{
+        RetrofitClient.myApiClient().login(email, password).enqueue(object : Callback<ResponseLogin>{
 
             override fun onResponse(call: Call<ResponseLogin>, response: Response<ResponseLogin>) {
+                Log.e("response", response.body()?.message.toString())
                 if (response.isSuccessful) {
-                    if (response.body()?.response == true) {
+                    if (response.body()?.success == true) {
 
                         //Membuat session
                         getSharedPreferences("login_session", MODE_PRIVATE)
                             .edit()
-                            .putString("email", response.body()?.payload?.email)
-                            .putString("name", response.body()?.payload?.name)
-                            .putString("level", response.body()?.payload?.level)
-                            .putString("photo", response.body()?.payload?.photo)
+                            .putString("email", response.body()?.user?.email)
+                            .putString("name", response.body()?.user?.name)
+                            .putString("level", response.body()?.user?.level)
+                            .putString("photo", response.body()?.user?.photo)
                             .apply()
 
-                        if (response.body()?.payload?.level == "1"){
+                        if (response.body()?.user?.level == "1"){
                             startActivity(Intent(this@LoginActivity, MenuDirekturActivity::class.java))
                             finish()
                         }
-                        if (response.body()?.payload?.level == "2"){
+                        if (response.body()?.user?.level == "2"){
                             startActivity(Intent(this@LoginActivity, MenuStaffMarketingActivity::class.java))
                             finish()
                         }
@@ -89,7 +88,7 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(
                             this@LoginActivity,
                             "Login gagal, periksa kembali email dan password Anda",
-                            Toast.LENGTH_LONG
+                            Toast.LENGTH_SHORT
                         ).show()
                     }
 
@@ -97,20 +96,19 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(
                         this@LoginActivity,
                         "Login gagal, terjadi kesalahan",
-                        Toast.LENGTH_LONG
+                        Toast.LENGTH_SHORT
                     ).show()
                 }
             }
 
-            override fun onFailure(call: retrofit2.Call<ResponseLogin>, t: Throwable) {
+            override fun onFailure(call: Call<ResponseLogin>, t: Throwable) {
                 Log.e("pesan error","${t.message}")
-            }
 
+                Toast.makeText(this@LoginActivity,"Login gagal, periksa kembali email dan password Anda",Toast.LENGTH_SHORT).show()            }
         })
     }
 
     override fun onBackPressed() {
         moveTaskToBack(true)
     }
-
 }

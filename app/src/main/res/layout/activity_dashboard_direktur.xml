@@ -82,7 +82,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginBottom="10dp"
                         android:orientation="horizontal"
                         app:layout_scrollFlags="scroll|enterAlways">
 
@@ -108,7 +107,7 @@
                                 android:drawableStart="@drawable/icon_date2"
                                 android:drawablePadding="12dp"
                                 android:fontFamily="@font/opensans_medium"
-                                android:text="01-01-2022"
+                                android:text="2022-01-01"
                                 android:textColor="@color/white" />
 
                         </androidx.cardview.widget.CardView>
@@ -144,12 +143,21 @@
                                 android:drawableStart="@drawable/icon_date2"
                                 android:drawablePadding="12dp"
                                 android:fontFamily="@font/opensans_medium"
-                                android:text="01-01-2022"
+                                android:text="2022-01-01"
                                 android:textColor="@color/white" />
 
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_apply_tanggal_direktur"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:text="Apply"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:textSize="11sp"
+                        android:layout_gravity="center"/>
 
                     <View
                         android:layout_width="match_parent"
@@ -157,10 +165,8 @@
                         android:layout_marginBottom="10dp"
                         android:background="#8F8F8F" />
 
-
-
-
                     <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
@@ -201,14 +207,13 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
-                                    android:text="2,2 %"
+                                    android:text="0 %"
                                     android:textColor="@color/white"/>
 
                                 <ImageView
-                                    android:id="@+id/indikator_total_transaksi"
+                                    android:id="@+id/indikator_total_transaksii"
                                     android:layout_width="wrap_content"
                                     android:layout_height="13dp"
-                                    android:src="@drawable/icon_up"
                                     android:layout_marginStart="5dp"
                                     android:layout_marginTop="13dp" />
 
@@ -217,23 +222,15 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/total_transaksi"
+                            android:id="@+id/total_transaksii"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/opensans_bold"
                             android:gravity="center"
-                            android:text="91.892"
+                            android:text=""
                             android:textColor="@color/white"
-                            android:textSize="40dp" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="0.7dp"
-                            android:background="#AFAFAF"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"/>
+                            android:textSize="40dp"
+                            android:layout_marginBottom="10dp"/>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -248,9 +245,10 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Average : "
+                                    android:text="Rata''  transaksi : "
                                     android:textColor="#B3B3B3"
-                                    android:layout_marginBottom="10dp"
+                                    android:textSize="12sp"
+                                    android:layout_marginBottom="1dp"
                                     android:layout_marginStart="10dp"
                                     android:fontFamily="@font/opensans_regular"/>
 
@@ -258,8 +256,9 @@
                                     android:id="@+id/rata2_total_transaksi"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="91.000"
+                                    android:text="91,216"
                                     android:textColor="#4CAF50"
+                                    android:textSize="12sp"
                                     android:fontFamily="@font/opensans_bold" />
 
                             </LinearLayout>
@@ -276,20 +275,234 @@
                                     android:text="Bulan Lalu : "
                                     android:gravity="end"
                                     android:textColor="#B3B3B3"
+                                    android:textSize="12sp"
                                     android:fontFamily="@font/opensans_regular"/>
 
                                 <TextView
-                                    android:id="@+id/total_transaksi_bulan_lalu"
+                                    android:id="@+id/total_transaksi_bulan_laluu"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="91.101"
+                                    android:text=""
                                     android:layout_marginEnd="10dp"
                                     android:textColor="#4CAF50"
+                                    android:textSize="12sp"
                                     android:fontFamily="@font/opensans_bold"/>
 
                             </LinearLayout>
 
                         </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="#ffff"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/expandLayout1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/opensans_medium"
+                                android:text="Jumlah Pendapatan Tiap Service"
+                                android:textColor="@color/white"
+                                android:layout_marginEnd="10dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:id="@+id/service1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:text="Service 1"
+                                    android:textColor="#B3B3B3"
+                                    android:textSize="12sp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/nilai_service1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:gravity="end"
+                                    android:text="Rp 1,000,000"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:textColor="#4CAF50"
+                                    android:textSize="12sp"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:id="@+id/service2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:text="Service 2"
+                                    android:textColor="#B3B3B3"
+                                    android:textSize="12sp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/nilai_service2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:gravity="end"
+                                    android:text="Rp 1,000,000"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:textColor="#4CAF50"
+                                    android:textSize="12sp"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:id="@+id/service3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:text="Service 3"
+                                    android:textColor="#B3B3B3"
+                                    android:textSize="12sp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/nilai_service3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:gravity="end"
+                                    android:text="Rp 1,000,000"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:textColor="#4CAF50"
+                                    android:textSize="12sp"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:id="@+id/service4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:text="Service 4"
+                                    android:textColor="#B3B3B3"
+                                    android:textSize="12sp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/nilai_service4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:gravity="end"
+                                    android:text="Rp 1,000,000"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:textColor="#4CAF50"
+                                    android:textSize="12sp"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="6dp">
+
+                                <TextView
+                                    android:id="@+id/service5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:text="Service 5"
+                                    android:textColor="#B3B3B3"
+                                    android:textSize="12sp"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/nilai_service5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:gravity="end"
+                                    android:text="Rp 1,000,000"
+                                    android:fontFamily="@font/opensans_regular"
+                                    android:textColor="#4CAF50"
+                                    android:textSize="12sp"
+                                    />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="#ffff"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/chart_service"
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp"
+                                android:layout_gravity="center"/>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_expand1"
+                            android:layout_width="100dp"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Expand"
+                            android:textColor="@color/white"
+                            android:layout_gravity="end"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:background="@drawable/button_bg2"/>
 
                     </LinearLayout>
                     // TAMBAHAN
@@ -316,7 +529,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Informasi Transaksi"
+                        android:text="Informasi Transaksi Berdasarkan Service"
                         android:fontFamily="@font/opensans_bold"
                         android:textColor="@color/black"/>
 
@@ -376,14 +589,13 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="10dp"
-                                        android:text="2,1 %"
+                                        android:text="0 %"
                                         android:textColor="@color/gray"/>
 
                                     <ImageView
                                         android:id="@+id/indikator_transaksi_sukses"
                                         android:layout_width="wrap_content"
                                         android:layout_height="13dp"
-                                        android:src="@drawable/icon_up"
                                         android:layout_marginStart="5dp"
                                         android:layout_marginTop="13dp" />
 
@@ -397,11 +609,12 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/nama_transaksi_sukses_terbanyak"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/opensans_bold"
                                     android:gravity="center"
-                                    android:text="PLN Pasca Bayar"
+                                    android:text=""
                                     android:textColor="@color/gray"
                                     android:textSize="20dp"/>
 
@@ -409,7 +622,7 @@
                                     android:id="@+id/transaksi_sukses_terbanyak"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="78.270"
+                                    android:text=""
                                     android:fontFamily="@font/opensans_bold"
                                     android:gravity="center"
                                     android:textColor="#009688"
@@ -439,18 +652,20 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Average : "
+                                        android:text="Rata''  transaksi sukses : "
                                         android:textColor="@color/gray"
                                         android:layout_marginBottom="10dp"
                                         android:layout_marginStart="10dp"
-                                        android:fontFamily="@font/opensans_regular"/>
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:textSize="12sp"/>
 
                                     <TextView
                                         android:id="@+id/rata2_transaksi_sukses"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="77.000"
+                                        android:text="75,336"
                                         android:textColor="#4CAF50"
+                                        android:textSize="12sp"
                                         android:fontFamily="@font/opensans_bold" />
 
                                 </LinearLayout>
@@ -467,15 +682,17 @@
                                         android:text="Bulan Lalu : "
                                         android:gravity="end"
                                         android:textColor="@color/gray"
+                                        android:textSize="12sp"
                                         android:fontFamily="@font/opensans_regular"/>
 
                                     <TextView
                                         android:id="@+id/transaksi_sukses_bulan_lalu"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="77.756"
+                                        android:text=""
                                         android:layout_marginEnd="10dp"
                                         android:textColor="#4CAF50"
+                                        android:textSize="12sp"
                                         android:fontFamily="@font/opensans_bold"/>
 
                                 </LinearLayout>
@@ -493,9 +710,9 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/transaksi_gagal"
                 app:contentPadding="12dp"
                 app:cardElevation="1dp"
-                android:id="@+id/transaksi_gagal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp">
@@ -560,14 +777,13 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="10dp"
-                                        android:text="130 %"
+                                        android:text="0 %"
                                         android:textColor="@color/gray"/>
 
                                     <ImageView
                                         android:id="@+id/indikator_transaksi_gagal"
                                         android:layout_width="wrap_content"
                                         android:layout_height="13dp"
-                                        android:src="@drawable/icon_down"
                                         android:layout_marginStart="5dp"
                                         android:layout_marginTop="13dp" />
 
@@ -581,11 +797,12 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/nama_transaksi_gagal_terbanyak"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/opensans_bold"
                                     android:gravity="center"
-                                    android:text="PLN Pasca Bayar"
+                                    android:text=""
                                     android:textColor="@color/gray"
                                     android:textSize="20dp"/>
 
@@ -593,7 +810,7 @@
                                     android:id="@+id/transaksi_gagal_terbanyak"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="1.493"
+                                    android:text=""
                                     android:fontFamily="@font/opensans_bold"
                                     android:gravity="center"
                                     android:textColor="#600725"
@@ -623,18 +840,20 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Average : "
+                                        android:text="Rata''  transaksi gagal : "
                                         android:textColor="@color/gray"
                                         android:layout_marginBottom="10dp"
                                         android:layout_marginStart="10dp"
+                                        android:textSize="12sp"
                                         android:fontFamily="@font/opensans_regular"/>
 
                                     <TextView
                                         android:id="@+id/rata2_transaksi_gagal"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="900"
+                                        android:text="918"
                                         android:textColor="#57152B"
+                                        android:textSize="12sp"
                                         android:fontFamily="@font/opensans_bold" />
 
                                 </LinearLayout>
@@ -651,15 +870,17 @@
                                         android:text="Bulan Lalu : "
                                         android:gravity="end"
                                         android:textColor="@color/gray"
+                                        android:textSize="12sp"
                                         android:fontFamily="@font/opensans_regular"/>
 
                                     <TextView
                                         android:id="@+id/transaksi_gagal_bulan_lalu"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="625"
+                                        android:text=""
                                         android:layout_marginEnd="10dp"
                                         android:textColor="#57152B"
+                                        android:textSize="12sp"
                                         android:fontFamily="@font/opensans_bold"/>
 
                                 </LinearLayout>
@@ -697,6 +918,7 @@
 
 <!--                    TOTAL PENDAPATAN KOTOR-->
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="4dp"
@@ -737,14 +959,13 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="10dp"
-                                        android:text="1,9 %"
+                                        android:text="0 %"
                                         android:textColor="@color/gray"/>
 
                                     <ImageView
                                         android:id="@+id/indikator_total_pendapatan_kotor"
                                         android:layout_width="wrap_content"
                                         android:layout_height="13dp"
-                                        android:src="@drawable/icon_down"
                                         android:layout_marginStart="5dp"
                                         android:layout_marginTop="13dp" />
 
@@ -761,22 +982,15 @@
                                     android:id="@+id/total_pendapatan_kotor"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Rp 125.416.860"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text=""
                                     android:fontFamily="@font/opensans_bold"
                                     android:gravity="center"
                                     android:textColor="@color/gray"
                                     android:textSize="26dp"/>
 
                             </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="0.7dp"
-                                android:background="@color/gray"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginBottom="5dp"/>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -791,7 +1005,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Average : "
+                                        android:text="Rata-rata : "
                                         android:textSize="11dp"
                                         android:textColor="@color/gray"
                                         android:layout_marginBottom="10dp"
@@ -802,7 +1016,7 @@
                                         android:id="@+id/rata2_total_pendapatan_kotor"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Rp 125.000.000"
+                                        android:text="Rp 125,346,168"
                                         android:textSize="11dp"
                                         android:textColor="#57152B"
                                         android:fontFamily="@font/opensans_bold" />
@@ -828,7 +1042,7 @@
                                         android:id="@+id/total_pendapatan_kotor_bulan_lalu"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Rp 127.064.770"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:layout_marginEnd="10dp"
                                         android:textColor="#57152B"
@@ -837,6 +1051,217 @@
                                 </LinearLayout>
 
                             </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7dp"
+                                android:background="@color/gray"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <LinearLayout
+                                android:id="@+id/expandLayout2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/opensans_medium"
+                                    android:text="Jumlah Pendapatan Tiap Vendor"
+                                    android:textColor="@color/gray"
+                                    android:layout_marginEnd="10dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="6dp">
+
+                                    <TextView
+                                        android:id="@+id/vendor1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Vendor 1"
+                                        android:textColor="@color/gray"
+                                        android:textSize="12sp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/nilai_vendor1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="10dp"
+                                        android:gravity="end"
+                                        android:text="Rp 1,000,000"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:textColor="#57152B"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="6dp">
+
+                                    <TextView
+                                        android:id="@+id/vendor2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Vendor 2"
+                                        android:textColor="@color/gray"
+                                        android:textSize="12sp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/nilai_vendor2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="10dp"
+                                        android:gravity="end"
+                                        android:text="Rp 1,000,000"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:textColor="#57152B"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="6dp">
+
+                                    <TextView
+                                        android:id="@+id/vendor3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Vendor 3"
+                                        android:textColor="@color/gray"
+                                        android:textSize="12sp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/nilai_vendor3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="10dp"
+                                        android:gravity="end"
+                                        android:text="Rp 1,000,000"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:textColor="#57152B"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="6dp">
+
+                                    <TextView
+                                        android:id="@+id/vendor4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Vendor 4"
+                                        android:textColor="@color/gray"
+                                        android:textSize="12sp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/nilai_vendor4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="10dp"
+                                        android:gravity="end"
+                                        android:text="Rp 1,000,000"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:textColor="#57152B"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_marginBottom="6dp">
+
+                                    <TextView
+                                        android:id="@+id/vendor5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:text="Vendor 5"
+                                        android:textColor="@color/gray"
+                                        android:textSize="12sp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/nilai_vendor5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="10dp"
+                                        android:gravity="end"
+                                        android:text="Rp 1,000,000"
+                                        android:fontFamily="@font/opensans_regular"
+                                        android:textColor="#57152B"
+                                        android:textSize="12sp"
+                                        />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.7dp"
+                                    android:background="@color/gray"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"/>
+
+                                <com.github.mikephil.charting.charts.PieChart
+                                    android:id="@+id/chart_vendor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="220dp"
+                                    android:layout_gravity="center"/>
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/btn_expand2"
+                                android:layout_width="100dp"
+                                android:layout_height="35dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Expand"
+                                android:textColor="@color/white"
+                                android:layout_gravity="end"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:background="@drawable/button_bg3"/>
 
                         </LinearLayout>
 
@@ -888,14 +1313,13 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="10dp"
-                                        android:text="1,9 %"
+                                        android:text="0 %"
                                         android:textColor="@color/gray"/>
 
                                     <ImageView
                                         android:id="@+id/indikator_total_komisi"
                                         android:layout_width="wrap_content"
                                         android:layout_height="13dp"
-                                        android:src="@drawable/icon_down"
                                         android:layout_marginStart="5dp"
                                         android:layout_marginTop="13dp" />
 
@@ -912,7 +1336,7 @@
                                     android:id="@+id/total_komisi"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Rp 62.814.500"
+                                    android:text=""
                                     android:fontFamily="@font/opensans_bold"
                                     android:gravity="center"
                                     android:textColor="@color/gray"
@@ -942,7 +1366,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Average : "
+                                        android:text="Rata-rata : "
                                         android:textSize="11dp"
                                         android:textColor="@color/gray"
                                         android:layout_marginBottom="10dp"
@@ -953,7 +1377,7 @@
                                         android:id="@+id/rata2_total_komisi"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Rp 62.000.000"
+                                        android:text="Rp 63,782,135"
                                         android:textSize="11dp"
                                         android:textColor="#57152B"
                                         android:fontFamily="@font/opensans_bold" />
@@ -979,7 +1403,7 @@
                                         android:id="@+id/total_komisi_bulan_lalu"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Rp 63.563.750"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:layout_marginEnd="10dp"
                                         android:textColor="#57152B"
@@ -1039,14 +1463,13 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="10dp"
-                                        android:text="1,2 %"
+                                        android:text="%"
                                         android:textColor="@color/gray"/>
 
                                     <ImageView
                                         android:id="@+id/indikator_total_pendapatan_bersih"
                                         android:layout_width="wrap_content"
                                         android:layout_height="13dp"
-                                        android:src="@drawable/icon_down"
                                         android:layout_marginStart="5dp"
                                         android:layout_marginTop="13dp" />
 
@@ -1063,7 +1486,7 @@
                                     android:id="@+id/total_pendapatan_bersih"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Rp 62.033.860"
+                                    android:text=""
                                     android:fontFamily="@font/opensans_bold"
                                     android:gravity="center"
                                     android:textColor="@color/gray"
@@ -1093,7 +1516,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Average : "
+                                        android:text="Rata-rata : "
                                         android:textSize="11dp"
                                         android:textColor="@color/gray"
                                         android:layout_marginBottom="10dp"
@@ -1104,7 +1527,7 @@
                                         android:id="@+id/rata2_total_pendapatan_bersih"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Rp 61.500.000"
+                                        android:text="Rp 62,565,325"
                                         android:textSize="11dp"
                                         android:textColor="#57152B"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1130,7 +1553,7 @@
                                         android:id="@+id/total_pendapatan_bersih_bulan_lalu"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Rp 62.864.770"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:layout_marginEnd="10dp"
                                         android:textColor="#57152B"
@@ -1164,7 +1587,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/opensans_bold"
-                        android:text="Informasi Vendor"
+                        android:text="Informasi Saldo Tiap Vendor"
                         android:textColor="@color/black"
                         android:layout_marginBottom="8dp"/>
 
@@ -1197,7 +1620,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="Rp 34.819.976"
+                                android:text=""
                                 android:textColor="@color/white"
                                 android:textSize="26dp" />
 
@@ -1225,7 +1648,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Jumlah Transaksi : "
+                                        android:text="Jumlah transaksi vendor : "
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:layout_marginBottom="10dp"
@@ -1236,7 +1659,7 @@
                                         android:id="@+id/jumlah_transaksi_lunasin"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="72.686"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1264,7 +1687,7 @@
                                         android:id="@+id/jumlah_transaksi_bulan_lalu_lunasin"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="71.891"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1312,7 +1735,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="Rp 8.652.542"
+                                android:text=""
                                 android:textColor="@color/white"
                                 android:textSize="26dp" />
 
@@ -1340,7 +1763,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Jumlah Transaksi : "
+                                        android:text="Jumlah transaksi vendor : "
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:layout_marginBottom="10dp"
@@ -1351,7 +1774,7 @@
                                         android:id="@+id/jumlah_transaksi_ipn"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="210"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1379,7 +1802,7 @@
                                         android:id="@+id/jumlah_transaksi_bulan_lalu_ipn"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="336"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1427,7 +1850,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="Rp 65.807.250.00"
+                                android:text=""
                                 android:textColor="@color/white"
                                 android:textSize="26dp" />
 
@@ -1454,7 +1877,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Jumlah Transaksi : "
+                                        android:text="Jumlah transaksi vendor: "
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:layout_marginBottom="10dp"
@@ -1465,7 +1888,7 @@
                                         android:id="@+id/jumlah_transaksi_teleanjar"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="9.898"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1493,7 +1916,7 @@
                                         android:id="@+id/jumlah_transaksi_bulan_lalu_teleanjar"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="11.083"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1540,7 +1963,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="Rp 65.807.250.00"
+                                android:text=""
                                 android:textColor="@color/white"
                                 android:textSize="26dp" />
 
@@ -1567,7 +1990,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Jumlah Transaksi : "
+                                        android:text="Jumlah transaksi vendor : "
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:layout_marginBottom="10dp"
@@ -1578,7 +2001,7 @@
                                         android:id="@+id/jumlah_transaksi_dflash"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="6.279"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1606,7 +2029,7 @@
                                         android:id="@+id/jumlah_transaksi_bulan_lalu_dflash"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="6.413"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1653,7 +2076,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/opensans_bold"
                                 android:gravity="center"
-                                android:text="Rp 65.807.250.00"
+                                android:text=""
                                 android:textColor="@color/white"
                                 android:textSize="26dp" />
 
@@ -1680,7 +2103,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Jumlah Transaksi : "
+                                        android:text="Jumlah transaksi vendor : "
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:layout_marginBottom="10dp"
@@ -1691,7 +2114,7 @@
                                         android:id="@+id/jumlah_transaksi_mobilepulsa"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="1.638"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1719,7 +2142,7 @@
                                         android:id="@+id/jumlah_transaksi_bulan_lalu_mobilepulsa"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="1.710"
+                                        android:text=""
                                         android:textSize="11dp"
                                         android:textColor="@color/white"
                                         android:fontFamily="@font/opensans_bold" />
@@ -1727,7 +2150,6 @@
                                 </LinearLayout>
 
                             </LinearLayout>
-
 
                         </LinearLayout>
 

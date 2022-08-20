@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.getbase.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.popup_logout_layout.*
 
 class MenuDirekturActivity : AppCompatActivity() {
 
@@ -71,17 +72,16 @@ class MenuDirekturActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val mDialogView = LayoutInflater.from(this).inflate(R.layout.popup_logout_layout,null)
+        val mDialogView = LayoutInflater.from(this).inflate(R.layout.popup_logout_layout2,null)
         val mBuilder = androidx.appcompat.app.AlertDialog.Builder(this)
             .setView(mDialogView)
         mDialogView.setBackgroundResource(R.drawable.popup_bg)
+
         val mAlertDialog = mBuilder.show()
 
         mDialogView.findViewById<Button>(R.id.btn_logout_sudah).setOnClickListener {
             mAlertDialog.dismiss()
-            var intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
+            finishAffinity()
         }
 
         mDialogView.findViewById<Button>(R.id.btn_logout_belum).setOnClickListener {
